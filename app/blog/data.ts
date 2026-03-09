@@ -10,6 +10,207 @@ export type Post = {
 
 export const posts: Post[] = [
   {
+    slug: 'what-oakland-meant-to-us',
+    title: "What Oakland Meant to Us -- And Why We Still Carry It",
+    excerpt: "The Coliseum is gone. The team is gone. But the memories, the community, and the green and gold identity we built there -- that belongs to us forever.",
+    category: 'Community',
+    date: '2026-03-05',
+    readingTime: '8 min read',
+    content: `
+There is a version of this story that gets told in box scores and stadium economics and franchise valuations. That version is real and documented and you can read it anywhere.
+
+This is not that version.
+
+This is about what it felt like to grow up in a city with a baseball team that was yours. Not a polished corporate product you consumed but something you belonged to, something that belonged to you back. The Oakland A's were that for a generation -- for three generations -- of people who lived in the East Bay and made the drive to the Coliseum and found, in that slightly run-down, incredibly inconvenient, perpetually almost-great stadium, something that felt like home.
+
+What Oakland meant, specifically: the Coliseum in July with the marine layer still sitting over the bleachers at six o'clock. The roar when a Bash Brother hit one into the third deck. The years when Billy Beane's teams won with players nobody else wanted, proving that Oakland could out-think the rich teams even if it could not outspend them. The tailgates in the parking lot -- the real kind, with real people from Oakland and Hayward and Richmond and Fremont, cooking real food, sharing real conversations.
+
+It was not glamorous. That was the point. The Coliseum was never Oracle Park. But Oracle Park was never the Coliseum. You either get that or you don't.
+
+**What We Built There**
+
+The fan community that grew up around those A's teams was specific in ways that outsiders consistently underestimated. Oakland A's fans were, and remain, some of the most analytically sophisticated and historically literate baseball fans in the country. The Moneyball years didn't just produce wins -- they produced a fan base that actually understood what was happening, that could read a box score and an OPS and a WAR and have an informed opinion about roster construction.
+
+But it was more than analytics. It was people. The regulars who sat in the same sections for twenty years. The Bleacher Creatures who made their own atmosphere when the announced crowd was six thousand. The families where three generations had rooted for the same team from the same section of the same stadium.
+
+That community didn't evaporate when the team left. It adapted. We found each other online. We found each other at watch parties. We carried the identity with us.
+
+**Why We Still Carry It**
+
+Some Oakland fans have made their peace with the Las Vegas chapter. Some haven't. Both are valid. The grief is real and the anger is real and neither of them has an expiration date.
+
+But here's what doesn't depend on any of that: what Oakland gave us is ours. The memories are ours. The community is ours. The identity -- green and gold, Oakland-built, perpetually underestimated, never quite appreciated by the national press, fiercely loyal to each other -- that's ours too.
+
+The team took itself to Las Vegas. It could not take what we built around it.
+
+We carry it because it's worth carrying. Because it was real. Because Oakland produced something in that run-down stadium on 66th Avenue that the franchise's front office never fully understood and could therefore never truly take with it when it left.
+
+We followed the team to Sacramento. Some of us will follow it to Las Vegas. Others won't. But all of us will always be Oakland A's fans, because that's what we were made into, and that doesn't change with a zip code.
+
+Oakland. We were here. We're still here.
+    `,
+  },
+  {
+    slug: 'the-sacramento-years-a-chapter-we-dont-skip',
+    title: "The Sacramento Years: A Chapter We Don't Skip",
+    excerpt: "Two seasons at Sutter Health Park. Strange, small, and more meaningful than anyone expected. Here is what Sacramento gave us.",
+    category: 'History',
+    date: '2026-02-28',
+    readingTime: '7 min read',
+    content: `
+Here is what the official history will probably say about Sacramento: it was a stopgap. A Triple-A stadium hosting a big-league team for two years while the real destination was being built two states away. A footnote between Oakland's end and Las Vegas's beginning.
+
+That official history will be incomplete.
+
+The Sacramento years -- 2025 and 2026 at Sutter Health Park -- were strange in ways that turned out to matter. They mattered because they gave the fan community a place to still be a fan community, at a moment when everything else was dissolving. They mattered because they happened at all, because the weirdness of a major-league team in a minor-league park turned out to be oddly fitting for a franchise that has always operated outside the normal script.
+
+**What Actually Happened There**
+
+Sutter Health Park is not what you expect when you think of major league baseball. The sightlines are intimate -- too intimate by MLB standards, but in practice it means you are genuinely close to the action. You can hear the infielders talk. You can see the pitcher's expression when a breaking ball doesn't break.
+
+The crowds were mixed. Some nights it felt like the whole Sacramento region showed up to be part of something unprecedented. Other nights it felt very much like a Triple-A crowd watching a big-league roster that wasn't quite sure what it was doing in this building. Both of those nights were honest.
+
+What held it together was the fans who came from Oakland and the Bay Area, driving two hours each way to still watch their team. Not their team playing in their city -- their team playing anywhere. That kind of loyalty is not nothing. It is, in fact, exactly everything.
+
+**What Sacramento Gave the Franchise**
+
+The Sacramento interlude revealed something important: the A's fan base would follow. Not universally, not without complicated feelings, but enough people showed up in a small park in a different city that it said something real about the community.
+
+It also gave the franchise a soft landing -- a period of lower pressure and lower stakes, playing in front of smaller crowds, working out the Sacramento region's baseball appetite, before the enormous bet of the Las Vegas stadium opens in 2028.
+
+**What We Should Remember**
+
+The Sacramento years should not be skipped in the telling. They are part of the migration story. This franchise has moved four times. Each stop shaped what it became. Oakland was the longest and the most consequential, yes. But Sacramento was where the community proved it was real -- proved it would show up even when showing up meant a long drive and a minor-league hot dog and a stadium built for ten thousand people.
+
+We showed up. Write that down.
+    `,
+  },
+  {
+    slug: 'las-vegas-deserves-this-team',
+    title: "Las Vegas Deserves This Team (And Vice Versa)",
+    excerpt: "The relocation was painful. Oakland's grief is real. And Las Vegas still deserves major league baseball. Both things are true at the same time.",
+    category: 'Opinion',
+    date: '2026-02-20',
+    readingTime: '6 min read',
+    content: `
+I want to say something that Oakland fans -- real ones, who cried when the last game ended -- are sometimes reluctant to say: Las Vegas deserves this team.
+
+Not because of what Fisher did. Not because the relocation was handled well, or fairly, or with any particular care for the Oakland community that got left behind. It wasn't, and we all know it wasn't.
+
+But Las Vegas itself -- the city, the people who live there, the community of sports fans who have built something real with the Golden Knights and the Raiders -- Las Vegas deserves to have baseball. It deserves a team it can call its own. The 2.3 million people who live in the greater Las Vegas area did not negotiate the A's departure from Oakland. They just woke up one day and found out they were getting a baseball team.
+
+You don't blame the new neighbors for the landlord's decisions.
+
+**Two Things True At Once**
+
+The grief is real. Oakland deserved better. John Fisher's ownership was inadequate. The Oakland community's investment in five decades of A's fandom was not met with equivalent care from the franchise. All of that is true.
+
+And: Las Vegas is a legitimate sports market with legitimate fans who deserve legitimate sports. The Golden Knights proved that. The Raiders are proving it. The A's are about to test it.
+
+Both things are true at the same time, and holding both without collapsing one into the other is actually important for the fan community we're trying to build here.
+
+**What Las Vegas Brings**
+
+Las Vegas brings something that Oakland, in its final years, could not provide: a clean slate. A new building. A city that hasn't already processed twenty years of broken promises and deferred maintenance and ownership that treated the fan base as an obstacle.
+
+Las Vegas fans come to this franchise without the scar tissue. They can fall in love with it cleanly. That's actually something worth rooting for.
+
+The A's deserve fans who are excited about the future. Las Vegas fans get to be those fans. Oakland fans get to carry the history. The migration doesn't have losers and winners -- it has different roles. Oakland built something. Las Vegas inherits it and gets to build something new on top of it.
+
+We followed the team here. That's not failure. That's loyalty. And loyalty, even complicated loyalty, is what makes a fan community worth belonging to.
+
+Green and gold. Wherever they play.
+    `,
+  },
+  {
+    slug: 'the-as-nation-why-this-fan-base-is-different',
+    title: "The A's Nation: Why This Fan Base Is Different",
+    excerpt: "Most teams have fans. The A's have something else -- a community built on underdog identity, Moneyball logic, and decades of doing more with less.",
+    category: 'Community',
+    date: '2026-02-10',
+    readingTime: '7 min read',
+    content: `
+Every team's fans believe their fan base is special. Usually they're wrong. Usually it's just sports tribalism with a particular logo attached.
+
+The Oakland A's fan base is actually different, and the difference is specific enough to describe.
+
+**The Underdog Identity**
+
+The A's were never the Giants. They were never the Raiders, when the Raiders were still relevant. They were the other team in the market, the one that played in the worse stadium and spent less money and still somehow kept producing playoff teams and World Series champions on budgets that the sport's other franchises wouldn't dignify with a serious comparison.
+
+That underdog positioning created a particular kind of fan. Not a casual fan who shows up when the team is good and disappears when it's bad -- there's a reason the A's have had those attendance numbers, and it's partly because fair-weather fans never really attached to this franchise. The fans who stayed were the ones who had decided, deliberately or by inheritance, that this was their team and it was worth caring about even when caring about it was inconvenient.
+
+**The Moneyball Effect**
+
+The publication of Moneyball in 2003 changed the A's fan base in a specific and interesting way. It attracted intellectually curious people who were interested in how baseball actually worked, who wanted to understand roster construction and player evaluation and the gap between what scouts said and what the numbers showed.
+
+These are fans who argue about WAR and question managerial decisions and know who the minor-league prospects are before they're called up. They are engaged in a way that goes beyond rooting for a team -- they are interested in the system, the process, the logic underneath the wins and losses.
+
+You find this kind of fan at other analytically-minded franchises, but the A's developed it earlier and more thoroughly than almost anyone else.
+
+**What the Relocation Revealed**
+
+The relocation did something unintentional but important: it revealed exactly how deep the community went. You find out what a fan base is actually made of when there is nothing left to root for except the team's history and each other.
+
+The online communities -- the subreddits, the Discord servers, the Facebook groups, the Twitter accounts that kept tracking the franchise's moves through Sacramento and toward Las Vegas -- kept going. Not in reduced form but in genuinely active form. People who had never met each other in Oakland were meeting each other at Sacramento watch parties. People who had never been to a game were getting drawn into the community through the drama of the relocation story.
+
+The migration didn't shrink the A's nation. It clarified it. The people who stayed are the real ones. The community that remains -- in Sacramento, in Las Vegas, in Oakland where people will never forget -- is smaller than it was and more genuine than it ever has been.
+
+That's something. In a sport full of manufactured enthusiasm and corporate fan engagement programs, genuine community is rare.
+
+The A's nation is genuine. It has earned that status the hard way. And wherever the team ends up -- whatever logo is on the stadium, whatever city's name comes before "Athletics" -- the community that built itself in Oakland and survived the migration will still be here, still be real, still be worth belonging to.
+    `,
+  },
+  {
+    slug: 'stadium-naming-rights-city-deals-what-fans-care-about',
+    title: "Stadium Naming Rights, City Deals, and What Fans Actually Care About",
+    excerpt: "Corporations buy stadium names. Cities negotiate tax deals. And fans want one thing: a team worth watching. An honest look at what matters and what doesn't.",
+    category: 'Analysis',
+    date: '2026-01-30',
+    readingTime: '8 min read',
+    content: `
+At some point in the near future, the Las Vegas A's ballpark will have a corporate name on it. A bank or an airline or a tech company or a cryptocurrency platform will pay tens of millions of dollars to have its name attached to the facility, and broadcasters will say that name a thousand times a season, and fans will immediately start calling it something else.
+
+This is fine. This is baseball.
+
+The stadium naming rights conversation, along with the broader question of public financing and city deals, tends to consume a lot of media attention during franchise relocations. It consumed attention during the Las Vegas A's saga. The $380 million Nevada public funding deal was debated extensively. The land deal with Bally's Corporation was analyzed. The construction financing structure was dissected.
+
+And all of that analysis matters, genuinely -- these are public resources being committed and there should be scrutiny.
+
+But fans, in our actual lived experience of supporting a team, care about almost none of it.
+
+**What Fans Actually Care About**
+
+Here is the honest list:
+
+Is the team competitive? This is the only question that actually drives sustained fan engagement. The Golden Knights built their Las Vegas fan base in large part by winning immediately. The Raiders have had more mixed results, and their local attachment reflects it. You can build the most beautiful stadium in the history of sports -- and the new Las Vegas ballpark does look genuinely spectacular in the renderings -- but if the team on the field is losing 95 games a year while the ownership talks about process, you will not build a lasting fan community.
+
+Is the experience worth the money? Modern stadium economics have pushed ticket prices, parking, and concessions to levels that have priced working-class families out of regular attendance at major-league games. The Las Vegas market has its own version of this problem: tourists who are already spending on entertainment have a higher price tolerance, which creates pressure to set prices accordingly, which makes it harder for locals to build the kind of regular-attendance habits that sustain a fan base through bad seasons.
+
+Does the ownership care? This is the question that the A's carry into Las Vegas with significant baggage. John Fisher's ownership in Oakland was defined, in fan perception, by a lack of investment that communicated indifference. Las Vegas fans have not experienced that history directly. They will form their own judgment based on what they see. But the Oakland experience will shadow the franchise's reputation for years.
+
+**The Corporate Name Won't Matter**
+
+When the Las Vegas ballpark opens in 2028 with whatever corporate name is attached to it, Oakland fans who have followed the franchise will call it something else within the first month. They will use the location, or a nickname, or just "the park." Las Vegas fans will do the same. This is universal and it happens with every naming rights deal.
+
+The naming rights money matters to the franchise's finances. It does not matter to the fan experience in any way that is worth caring about.
+
+**What the City Deal Actually Means**
+
+The Nevada public funding deal -- $380 million of hotel tax revenue -- matters because it shapes the financial structure of the franchise's Las Vegas existence. A franchise that enters a new market with substantial public investment has different obligations and different leverage than one that self-finances. It also has different political relationships.
+
+For fans, the practical implications are indirect. If the public investment is well-structured, the franchise has more financial stability and potentially more capacity to invest in the team. If it's poorly structured, the long-term friction between the franchise and the city government creates a background noise that eventually affects the fan relationship.
+
+The Las Vegas deal looks reasonably well-structured by the standards of these arrangements. It is not the most aggressive public subsidy in recent sports history, and the hotel tax mechanism is at least theoretically connected to the revenue the franchise generates for the tourism economy.
+
+But here's the honest truth: none of this determines whether going to a Las Vegas A's game in 2028 will be worth your time and money. That determination happens on the field.
+
+Win. That's what fans care about.
+
+Everything else is financing.
+    `,
+  },
+  {
     slug: 'complete-story-as-relocation-oakland-to-vegas',
     title: 'The Complete Story of the A\'s Relocation: From Oakland to Las Vegas',
     excerpt: 'The failed ballpark deals, John Fisher\'s decision, the MLB vote, and what comes next. Everything that happened, in order.',
