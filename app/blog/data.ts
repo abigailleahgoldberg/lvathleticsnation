@@ -8,7 +8,200 @@ export type Post = {
   content: string;
 };
 
-export const posts: Post[] = [
+export const posts: Post[
+
+  {
+    slug: 'las-vegas-athletics-stadium-every-update-2026',
+    title: "Las Vegas Athletics Stadium: Every Construction Update in 2026",
+    excerpt: "Foundation complete. Cranes up. $2 billion committed. Here is everything happening with the new Las Vegas Athletics ballpark — updated monthly.",
+    category: 'Stadium Watch',
+    date: '2026-03-09',
+    readingTime: '12 min read',
+    content: `
+<h2>The Build Is Real</h2>
+
+Walk past the corner of Las Vegas Boulevard South and Tropicana Avenue in March 2026 and what you see is unmistakable. This is not a rendering. This is not a proposal. This is a construction site that has consumed nine acres of the Las Vegas Strip and is turning them into a 33,000-seat baseball cathedral that will open before the 2028 season.
+
+The foundation work is complete as of February 2026. The cranes are operating daily. The concrete is pouring. And the franchise that spent its final Oakland years playing in a stadium held together by duct tape and nostalgia is building something that will have the closest seats to home plate of any ballpark in Major League Baseball.
+
+Here is everything we know, updated as the build progresses.
+
+<h2>February 2026: Foundation Complete</h2>
+
+The Las Vegas Stadium Authority confirmed in their February 19 meeting that foundation work on the Athletics ballpark is finished. Project director reports from Mortenson, the general contractor, indicate the project remains on schedule for a 2028 opening.
+
+Key milestones hit: site clearing and grading complete, foundation poured, structural steel fabrication underway. The 9-acre footprint is fully under construction control.
+
+Costs have risen from the original $1.75 billion estimate to approximately $2 billion. The Athletics organization, through their construction subsidiary Athletics StadCo LLC, is absorbing cost overruns per the terms of the stadium agreement with Clark County.
+
+<h2>The Stadium: What We Know</h2>
+
+The numbers tell part of the story:
+
+<strong>Capacity:</strong> 33,000 seats. That is smaller than most MLB parks by design. The A's are building for intimacy, not volume. Every seat will be close.
+
+<strong>Closest seats to home plate in MLB.</strong> This is not marketing language — it is an architectural specification. Eighty percent of seats will be located between the foul poles. The smallest foul territory in baseball means fans are genuinely part of the game.
+
+<strong>Location:</strong> Las Vegas Boulevard South at Tropicana Avenue. On the Strip. Walking distance from a dozen major hotels. This is not a suburban ballpark surrounded by parking lots — this is urban baseball embedded in the entertainment capital of the world.
+
+<strong>Retractable elements:</strong> The stadium is being designed for the desert climate. Details on roof and cooling systems are still emerging, but the organization has committed to making summer baseball comfortable in a city where July temperatures regularly exceed 110 degrees.
+
+<strong>Contractor:</strong> Mortenson, the same firm that built U.S. Bank Stadium in Minneapolis and Allegiant Stadium for the Raiders. They know how to build big in challenging environments.
+
+<h2>The Money</h2>
+
+The public-private financing structure has been a point of controversy since the move was announced. Here is what is committed:
+
+The A's are responsible for construction costs and overruns through Athletics StadCo LLC. Clark County approved $380 million in public funding through a transferable tax credit mechanism. The total project cost is now approximately $2 billion.
+
+Community benefits: the A's are required to contribute a minimum of $500,000 annually before the stadium opens. Once operational, that increases to $1.5 million per year or 1% of ticket revenues, whichever is greater.
+
+The binding stadium agreement means the franchise cannot relocate on a whim — a clause specifically designed to prevent another Oakland situation.
+
+<h2>March 2026 and Beyond</h2>
+
+Structural steel is going up. The superstructure will begin taking recognizable shape by summer 2026. By the end of the year, the building should have its basic form visible from the Strip.
+
+We will update this article monthly as construction progresses. Bookmark it. This is the fan community's construction tracker — no corporate spin, just what is actually happening on the ground.
+
+<h2>The Timeline to Opening Day</h2>
+
+<strong>2026:</strong> Structural steel, superstructure, building envelope
+<strong>2027:</strong> Interior buildout, systems installation, seating, playing surface
+<strong>Early 2028:</strong> Final inspections, commissioning, team move-in
+<strong>March/April 2028:</strong> Opening Day. The first pitch in Las Vegas Athletics history.
+
+Two years. The countdown is real. The concrete is real. The future is being poured right now on the Las Vegas Strip.
+
+Green and gold. Desert edition.
+    `,
+  },
+  {
+    slug: 'las-vegas-as-2026-schedule-watch-from-vegas',
+    title: "Las Vegas A's 2026 Schedule: How to Watch Every Game From Vegas",
+    excerpt: "The team plays in Sacramento this year. Here is how Vegas fans can follow every pitch — streaming, sports bars, road trips, and the full 2026 guide.",
+    category: 'Game Day',
+    date: '2026-03-09',
+    readingTime: '10 min read',
+    content: `
+<h2>Your Team Is in Sacramento. You Are in Vegas. Here Is How This Works.</h2>
+
+The Las Vegas Athletics play the 2026 season at Sutter Health Park in Sacramento. It is a minor-league stadium hosting a major-league team, and it is approximately 560 miles from the city whose name is on the jerseys.
+
+This is the last year of the Sacramento arrangement. By 2028, the team plays on the Strip. But right now, in 2026, being an LV A's fan means figuring out how to watch a team that plays its home games in a different state.
+
+We figured it out. Here is the complete guide.
+
+<h2>Streaming and TV</h2>
+
+The A's broadcast situation for 2026:
+
+<strong>MLB.TV:</strong> The primary way most Vegas fans will watch. $149.99 for the full season, or $129.99 with a single-team package. No blackout issues for Vegas-based fans watching Sacramento games — the blackout territory is Northern California, not Nevada.
+
+<strong>NBC Sports California:</strong> Regional broadcasts for fans in the Sacramento/Bay Area market. Not available in Las Vegas without a VPN or cable package that includes NorCal RSNs.
+
+<strong>ESPN/Fox/Apple TV+:</strong> National broadcasts throughout the season. Check the schedule — the A's will get some national windows, especially early in the season when the Vegas storyline is fresh.
+
+<strong>Free option:</strong> MLB.TV offers a free game of the day. The A's will be featured periodically.
+
+<h2>Best Sports Bars in Vegas to Watch A's Games</h2>
+
+You want to watch with people. Here is where:
+
+<strong>Circa Sportsbook:</strong> The three-story screen is absurd and it is exactly what you want for baseball. Full bar service, comfortable seating, and a crowd that actually watches the games. Downtown, Fremont Street.
+
+<strong>Westgate SuperBook:</strong> The largest sportsbook in the world. 220 feet of video wall. They will have the A's game on — you just have to ask. Off-Strip on Paradise Road.
+
+<strong>PT's Pub (multiple locations):</strong> The local's sports bar chain. Every location has dozens of screens and will put the A's game on request. No tourist markup. This is where actual Vegas residents watch sports.
+
+<strong>Stadium Swim at Circa:</strong> Watch baseball from a pool on Fremont Street. It sounds ridiculous because it is. But it is also genuinely fun and the screens are enormous.
+
+<strong>Moneyline at Park MGM:</strong> Solid sports bar on the Strip with good food and plenty of screens. Walking distance from where the new stadium is being built — you can watch the game and then walk over to check construction progress.
+
+<h2>The Road Trip: Vegas to Sacramento</h2>
+
+For the dedicated fan, the drive is doable:
+
+<strong>Distance:</strong> 560 miles, roughly 8 hours via I-5 or 7.5 hours via US-95 to I-5.
+<strong>Flight:</strong> Southwest and others fly LAS to SMF direct. Under 2 hours, often under $100 round trip if you book early.
+<strong>The move:</strong> Fly Friday afternoon, catch a weekend series, fly back Sunday night. Hotel in Sacramento is cheap — $80-120/night downtown.
+
+Sutter Health Park is small enough that every seat is a good seat. Get there early, walk around, appreciate the intimacy of a 14,000-seat ballpark. You will not get this experience again once the Vegas stadium opens.
+
+<h2>The 2026 Season: What to Expect</h2>
+
+This is a rebuild year in the traditional sense, but the A's farm system is stacked. The prospects are coming. Jacob Wilson, Luis Morales, and a wave of young talent are either on the roster or close.
+
+The won-loss record matters less than the development. Watch the young arms. Watch the defensive metrics. Watch for the pieces that will form the 2028 Opening Day roster in Las Vegas.
+
+This is the last year of exile. Enjoy the strangeness of it. Next year, we are home.
+    `,
+  },
+  {
+    slug: 'lv-athletics-season-tickets-2028-fan-guide',
+    title: "The Complete Fan Guide to LV Athletics Season Tickets 2028",
+    excerpt: "The waitlist is open. The pricing rumors are swirling. Here is everything we know about getting season tickets for Opening Day 2028 in Las Vegas.",
+    category: 'Tickets',
+    date: '2026-03-09',
+    readingTime: '9 min read',
+    content: `
+<h2>The Waitlist Is Open and It Is Going to Matter</h2>
+
+If you want to be in the building for the first pitch in Las Vegas Athletics history — and you should want that, because it will be one of those moments people talk about for decades — then you need to understand the season ticket situation now. Not next year. Now.
+
+The A's have opened their interest list for the new Las Vegas ballpark. This is not yet a commitment to purchase, but it is the pipeline. When actual season ticket packages go on sale (expected late 2027), the interest list is where priority access comes from.
+
+Here is what we know, what we can reasonably project, and what you should do about it.
+
+<h2>Pricing: What to Expect</h2>
+
+The A's have not announced official season ticket pricing for the Las Vegas stadium. But we can make educated projections based on comparable markets and the stadium's positioning.
+
+<strong>Comparable: Las Vegas Raiders (Allegiant Stadium)</strong>
+The Raiders' season ticket prices range from approximately $75 per game (upper bowl) to $500+ per game (club level and suites). Personal Seat Licenses (PSLs) range from $500 to $75,000. The Raiders positioned themselves as a premium product in a premium market.
+
+<strong>Comparable: Vegas Golden Knights (T-Mobile Arena)</strong>
+Knights season tickets range from roughly $50 per game (upper bowl) to $300+ per game (lower bowl premium). The Knights have maintained near-100% capacity since their inaugural season.
+
+<strong>Projected A's pricing:</strong>
+Baseball plays 81 home games — far more than football (8-10) or hockey (41). Per-game prices will be lower, but the total season commitment is higher. Expect:
+- Upper deck: $20-40 per game ($1,600-3,200 per season)
+- Mid-level: $40-80 per game ($3,200-6,500 per season)
+- Lower bowl: $80-150 per game ($6,500-12,000 per season)
+- Premium/club: $150-300+ per game ($12,000-24,000+ per season)
+
+These are projections based on market comparables. The A's may price aggressively low for the inaugural season to fill the building and build the fan base. They may not. We will update when official numbers drop.
+
+<h2>The Best Sections: Where to Sit</h2>
+
+The new stadium has the closest seats to home plate in MLB and the smallest foul territory in baseball. This means:
+
+<strong>Behind home plate:</strong> You are closer to the catcher than in any other ballpark. These will be the most expensive seats and the hardest to get. Worth it.
+
+<strong>Between the foul poles:</strong> 80% of seats are here. The stadium was designed so that the vast majority of fans have a direct, close view of the playing field. There are no bad seats between the poles.
+
+<strong>The outfield:</strong> Traditional baseball atmosphere. Cheaper tickets, louder fans, more standing and socializing. This is where the fan community will build its identity in the new park.
+
+<strong>Club level:</strong> For the premium experience. Climate-controlled, food and drink included, and the desert heat becomes irrelevant.
+
+<h2>How to Get On the List</h2>
+
+Step one: visit the official A's website and register your interest. This costs nothing and puts you in the queue.
+
+Step two: when deposits open (expected 2027), be ready to put money down quickly. Inaugural season tickets at new stadiums sell out. The Raiders sold out Allegiant. The Knights sold out T-Mobile. The A's will very likely sell out a 33,000-seat stadium for Opening Day 2028.
+
+Step three: decide your budget and your section preference now. When the window opens, you will not have time to deliberate.
+
+<h2>The Investment Case</h2>
+
+Season tickets for an inaugural season at a new MLB stadium on the Las Vegas Strip are not just entertainment — they are an asset. Resale value for Opening Day tickets alone could exceed the cost of several regular-season games. The Strip location means every visiting fan base will want to experience the new park, keeping demand high all season.
+
+This is not financial advice. But it is common sense: there will only ever be one first season. One first Opening Day. One first pitch. If you want to be part of it, the time to act is now.
+
+Green and gold. Get your seats.
+    `,
+  },
+] = [
   {
     slug: 'what-oakland-meant-to-us',
     title: "What Oakland Meant to Us -- And Why We Still Carry It",
