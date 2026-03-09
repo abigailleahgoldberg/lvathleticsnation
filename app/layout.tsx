@@ -85,7 +85,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           </a>
 
           <div style={{ display: 'flex', alignItems: 'center', gap: '2.5rem' }}>
-            <a href="/blog" style={{
+            <a href="/betting" style={{
               fontFamily: 'var(--font-inter)',
               fontSize: '0.8rem',
               fontWeight: 500,
@@ -94,7 +94,29 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               textTransform: 'uppercase',
               opacity: 0.8,
             }}>
-              The Story
+              Betting
+            </a>
+            <a href="/vegas-guide" style={{
+              fontFamily: 'var(--font-inter)',
+              fontSize: '0.8rem',
+              fontWeight: 500,
+              color: BONE,
+              letterSpacing: '0.08em',
+              textTransform: 'uppercase',
+              opacity: 0.8,
+            }}>
+              Vegas Guide
+            </a>
+            <a href="/seating-guide" style={{
+              fontFamily: 'var(--font-inter)',
+              fontSize: '0.8rem',
+              fontWeight: 500,
+              color: BONE,
+              letterSpacing: '0.08em',
+              textTransform: 'uppercase',
+              opacity: 0.8,
+            }}>
+              Seating
             </a>
             <a href="/blog" style={{
               fontFamily: 'var(--font-inter)',
