@@ -1,0 +1,33 @@
+:root {
+  --dark: #080A08;
+  --green: #003831;
+  --gold: #EFB21E;
+  --cream: #FAFAF8;
+  --gray: #6B7280;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  background: var(--dark);
+  color: var(--cream);
+  font-family: Georgia, serif;
+  line-height: 1.7;
+}
+
+a {
+  color: var(--gold);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
