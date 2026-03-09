@@ -1,657 +1,957 @@
 "use client"
 
+import { useState } from 'react'
 import Link from 'next/link'
 import { posts } from './blog/data'
 
-/* ---- palette ---- */
 const C = {
-  green:    '#1A3C2F',
-  gold:     '#D4A843',
-  bone:     '#E8E0D0',
-  dark:     '#0D0F0C',
-  concrete: '#6B7066',
-  red:      '#A63228',
+  green: '#003831',
+  forest: '#1B5E20',
+  gold: '#FFD700',
+  amber: '#F5A623',
+  dark: '#0A0C08',
+  bone: '#F5F0E8',
+  concrete: '#424242',
+  red: '#CC0000',
+  lime: '#7CB342',
 }
 
-/* ---- font stacks ---- */
-const F = {
-  anton:  "var(--font-anton), 'Anton', Impact, sans-serif",
-  libre:  "var(--font-libre), 'Libre Baskerville', Georgia, serif",
-  inter:  "var(--font-inter), 'Inter', system-ui, sans-serif",
-  mono:   "var(--font-space), 'Space Mono', 'Courier New', monospace",
-}
-
-/* ---- pick 3 featured posts ---- */
 const featured = posts.slice(0, 3)
+const more = posts.slice(3, 9)
+const categories = [...new Set(posts.map(p => p.category))]
 
 export default function Home() {
+  const [mobileNav, setMobileNav] = useState(false)
+  const [email, setEmail] = useState('')
+  const [activeFilter, setActiveFilter] = useState('all')
+
+  const filtered = activeFilter === 'all' ? more : more.filter(p => p.category === activeFilter)
+
   return (
     <>
-      {/* ----- CSS ANIMATIONS ----- */}
       <style>{`
-        @keyframes pulse-dot {
-          0%, 100% { box-shadow: 0 0 0 0 rgba(212,168,67,0.7); }
-          50%       { box-shadow: 0 0 0 16px rgba(212,168,67,0); }
+        @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Barlow+Condensed:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap');
+
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; }
+        body { background: ${C.dark}; color: ${C.bone}; overflow-x: hidden; font-family: 'Inter', system-ui, sans-serif; }
+        a { color: inherit; text-decoration: none; }
+        ::selection { background: ${C.gold}; color: ${C.dark}; }
+
+        @keyframes marquee { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+        @keyframes pulse-live { 0%, 100% { opacity: 1; } 50% { opacity: 0.4; } }
+        @keyframes slide-up { from { opacity: 0; transform: translateY(40px); } to { opacity: 1; transform: translateY(0); } }
+        @keyframes scoreboard-flash { 0%, 100% { background: ${C.green}; } 50% { background: #004D40; } }
+        @keyframes wave { 0% { transform: rotate(0deg); } 25% { transform: rotate(15deg); } 50% { transform: rotate(0deg); } 75% { transform: rotate(-15deg); } 100% { transform: rotate(0deg); } }
+
+        .hover-lift { transition: transform 0.2s, box-shadow 0.2s; }
+        .hover-lift:hover { transform: translateY(-6px); box-shadow: 0 12px 40px rgba(0,0,0,0.5); }
+
+        .pulse-badge { animation: pulse-live 1.5s ease-in-out infinite; }
+
+        .fan-card { position: relative; overflow: hidden; }
+        .fan-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, ${C.green}, ${C.gold}, ${C.green}); }
+
+        .filter-btn { font-family: 'Space Mono', monospace; font-size: 0.65rem; letter-spacing: 0.12em; text-transform: uppercase; padding: 0.5rem 1.2rem; border: 1px solid rgba(255,215,0,0.2); background: transparent; color: rgba(245,240,232,0.5); cursor: pointer; transition: all 0.2s; }
+        .filter-btn:hover { border-color: ${C.gold}; color: ${C.gold}; }
+        .filter-btn.active { background: ${C.green}; border-color: ${C.gold}; color: ${C.gold}; }
+
+        .mega-link { display: block; padding: 1.5rem 2rem; border-bottom: 1px solid rgba(255,215,0,0.08); transition: all 0.2s; }
+        .mega-link:hover { background: rgba(0,56,49,0.3); padding-left: 2.5rem; }
+        .mega-link:hover .arrow-icon { transform: translateX(6px); }
+        .arrow-icon { transition: transform 0.2s; display: inline-block; }
+
+        @media (max-width: 900px) {
+          .hero-text { font-size: 3.5rem !important; }
+          .hero-sub { font-size: 1.2rem !important; }
+          .grid-3 { grid-template-columns: 1fr !important; }
+          .grid-2 { grid-template-columns: 1fr !important; }
+          .featured-grid { grid-template-columns: 1fr !important; }
+          .desktop-nav { display: none !important; }
+          .mobile-toggle { display: flex !important; }
+          .pad { padding-left: 1.5rem !important; padding-right: 1.5rem !important; }
+          .scoreboard-grid { grid-template-columns: 1fr 1fr !important; }
+          .footer-cols { grid-template-columns: 1fr !important; text-align: center; }
         }
-        @keyframes pulse-label {
-          0%, 100% { opacity: 1; }
-          50%       { opacity: 0.55; }
-        }
-        .blog-card:hover {
-          transform: translateY(-3px);
-        }
-        .blog-card {
-          transition: transform 0.2s ease;
-        }
-        .read-link:hover {
-          letter-spacing: 0.3em !important;
-        }
-        .read-link {
-          transition: letter-spacing 0.2s ease;
+        @media (max-width: 600px) {
+          .hero-text { font-size: 2.5rem !important; }
+          .scoreboard-grid { grid-template-columns: 1fr !important; }
         }
       `}</style>
 
-      {/* ----- GRAIN OVERLAY ----- */}
+      {/* ============ TOP BAR — GAME DAY ENERGY ============ */}
       <div style={{
+        background: C.green,
+        overflow: 'hidden',
+        padding: '0.5rem 0',
         position: 'fixed',
-        top: 0, left: 0, width: '100%', height: '100%',
-        pointerEvents: 'none',
-        zIndex: 998,
-        opacity: 0.03,
-        backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")`,
-      }} aria-hidden="true" />
+        top: 0,
+        left: 0,
+        right: 0,
+        zIndex: 1001,
+      }}>
+        <div style={{
+          display: 'inline-flex',
+          animation: 'marquee 35s linear infinite',
+          whiteSpace: 'nowrap',
+        }}>
+          {[0, 1].map(i => (
+            <span key={i} style={{
+              fontFamily: "'Barlow Condensed', sans-serif",
+              fontSize: '0.75rem',
+              fontWeight: 600,
+              letterSpacing: '0.1em',
+              textTransform: 'uppercase',
+              color: C.gold,
+              display: 'inline-flex',
+              alignItems: 'center',
+              gap: '2rem',
+              paddingRight: '2rem',
+            }}>
+              <span>⚾ LV ATHLETICS NATION</span>
+              <span style={{ color: C.bone, opacity: 0.5 }}>|</span>
+              <span>THE FAN COMMUNITY</span>
+              <span style={{ color: C.bone, opacity: 0.5 }}>|</span>
+              <span>OAKLAND ROOTS • VEGAS PRIDE</span>
+              <span style={{ color: C.bone, opacity: 0.5 }}>|</span>
+              <span>🏟️ OPENING DAY 2028</span>
+              <span style={{ color: C.bone, opacity: 0.5 }}>|</span>
+              <span>GREEN &amp; GOLD FOREVER</span>
+              <span style={{ color: C.bone, opacity: 0.5 }}>|</span>
+            </span>
+          ))}
+        </div>
+      </div>
 
-      {/* ======================================
-          SECTION 1: HERO
-      ====================================== */}
-      <section style={{
-        minHeight: '100vh',
-        background: C.dark,
+      {/* ============ NAV ============ */}
+      <nav style={{
+        position: 'fixed',
+        top: '28px',
+        left: 0,
+        right: 0,
+        zIndex: 1000,
+        background: 'rgba(10,12,8,0.92)',
+        backdropFilter: 'blur(12px)',
+        borderBottom: '2px solid ' + C.gold,
+        padding: '0 3rem',
+        height: '58px',
         display: 'flex',
-        flexDirection: 'column',
-        justifyContent: 'center',
+        alignItems: 'center',
+        justifyContent: 'space-between',
+      }}>
+        <Link href="/" style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
+          <div style={{
+            background: C.green,
+            width: '38px',
+            height: '38px',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            fontFamily: "'Oswald', sans-serif",
+            fontSize: '1.3rem',
+            fontWeight: 700,
+            color: C.gold,
+            border: '2px solid ' + C.gold,
+          }}>N</div>
+          <div>
+            <div style={{ fontFamily: "'Oswald', sans-serif", fontSize: '1rem', fontWeight: 700, color: C.gold, letterSpacing: '0.1em', textTransform: 'uppercase', lineHeight: 1 }}>LV Athletics Nation</div>
+            <div style={{ fontFamily: "'Space Mono', monospace", fontSize: '0.45rem', letterSpacing: '0.2em', color: 'rgba(245,240,232,0.4)', textTransform: 'uppercase' }}>The Fan Community</div>
+          </div>
+        </Link>
+
+        <div className="desktop-nav" style={{ display: 'flex', alignItems: 'center', gap: '2rem' }}>
+          {['Stories', 'Community', 'Game Day', 'Tickets'].map(item => (
+            <Link key={item} href="/blog" style={{
+              fontFamily: "'Barlow Condensed', sans-serif",
+              fontSize: '0.82rem',
+              fontWeight: 600,
+              letterSpacing: '0.12em',
+              textTransform: 'uppercase',
+              color: 'rgba(245,240,232,0.55)',
+              transition: 'color 0.2s',
+            }}>{item}</Link>
+          ))}
+          <a href="https://www.stubhub.com/las-vegas-athletics-tickets" target="_blank" rel="noopener" style={{
+            fontFamily: "'Barlow Condensed', sans-serif",
+            fontSize: '0.78rem',
+            fontWeight: 700,
+            letterSpacing: '0.1em',
+            textTransform: 'uppercase',
+            color: C.dark,
+            background: C.gold,
+            padding: '0.45rem 1.2rem',
+          }}>🎟️ Tickets</a>
+        </div>
+
+        <button className="mobile-toggle" onClick={() => setMobileNav(!mobileNav)} style={{
+          display: 'none',
+          width: '36px',
+          height: '36px',
+          background: 'none',
+          border: '1px solid ' + C.gold,
+          color: C.gold,
+          fontSize: '1.1rem',
+          cursor: 'pointer',
+          alignItems: 'center',
+          justifyContent: 'center',
+        }}>{mobileNav ? '✕' : '☰'}</button>
+      </nav>
+
+      {mobileNav && (
+        <div style={{
+          position: 'fixed',
+          top: '86px',
+          left: 0,
+          right: 0,
+          background: 'rgba(10,12,8,0.98)',
+          zIndex: 999,
+          padding: '1.5rem 2rem',
+          borderBottom: '2px solid ' + C.gold,
+        }}>
+          {['Stories', 'Community', 'Game Day'].map(item => (
+            <Link key={item} href="/blog" onClick={() => setMobileNav(false)} style={{
+              display: 'block',
+              fontFamily: "'Barlow Condensed', sans-serif",
+              fontSize: '1rem',
+              fontWeight: 600,
+              color: C.gold,
+              padding: '0.75rem 0',
+              borderBottom: '1px solid rgba(255,215,0,0.1)',
+            }}>{item}</Link>
+          ))}
+        </div>
+      )}
+
+      {/* ============ HERO ============ */}
+      <section className="pad" style={{
+        minHeight: '100vh',
+        paddingTop: '120px',
+        padding: '120px 3rem 4rem',
+        background: `linear-gradient(170deg, ${C.green} 0%, ${C.dark} 65%)`,
         position: 'relative',
         overflow: 'hidden',
-        padding: '6rem 5vw 5rem',
       }}>
-        {/* Watermark "A" */}
+        {/* Stadium silhouette */}
+        <svg style={{ position: 'absolute', bottom: 0, left: 0, right: 0, width: '100%', height: '200px', opacity: 0.06 }} viewBox="0 0 1440 200" preserveAspectRatio="none">
+          <path d="M0,200 L0,140 Q180,80 360,120 Q540,160 720,100 Q900,40 1080,90 Q1260,140 1440,80 L1440,200Z" fill={C.gold}/>
+        </svg>
+
+        {/* Diamond pattern overlay */}
         <div aria-hidden="true" style={{
           position: 'absolute',
-          top: '50%',
-          left: '50%',
-          transform: 'translate(-50%, -50%)',
-          fontFamily: F.anton,
-          fontSize: 'clamp(300px, 55vw, 900px)',
-          color: C.bone,
-          opacity: 0.04,
-          lineHeight: 1,
-          userSelect: 'none',
+          top: '10%',
+          right: '5%',
+          width: '300px',
+          height: '300px',
+          border: '2px solid rgba(255,215,0,0.06)',
+          transform: 'rotate(45deg)',
           pointerEvents: 'none',
-          zIndex: 0,
-          whiteSpace: 'nowrap',
-        }}>A</div>
+        }} />
+        <div aria-hidden="true" style={{
+          position: 'absolute',
+          top: '15%',
+          right: '8%',
+          width: '200px',
+          height: '200px',
+          border: '2px solid rgba(255,215,0,0.04)',
+          transform: 'rotate(45deg)',
+          pointerEvents: 'none',
+        }} />
 
-        {/* Hero typography */}
-        <div style={{ position: 'relative', zIndex: 1, maxWidth: '900px' }}>
-          <h1 style={{ lineHeight: 0.9, marginBottom: '2.5rem' }}>
+        <div style={{ maxWidth: '1200px', margin: '0 auto', position: 'relative', zIndex: 2 }}>
+          {/* Community badge */}
+          <div style={{
+            display: 'inline-flex',
+            alignItems: 'center',
+            gap: '0.6rem',
+            background: 'rgba(0,56,49,0.5)',
+            border: '1px solid rgba(255,215,0,0.3)',
+            padding: '0.5rem 1.2rem',
+            marginBottom: '2.5rem',
+            animation: 'slide-up 0.5s ease-out',
+          }}>
+            <span style={{ fontSize: '1rem', animation: 'wave 2s ease-in-out infinite' }}>⚾</span>
             <span style={{
-              display: 'block',
-              fontFamily: F.anton,
-              fontSize: 'clamp(80px, 14vw, 160px)',
+              fontFamily: "'Space Mono', monospace",
+              fontSize: '0.62rem',
+              letterSpacing: '0.18em',
+              textTransform: 'uppercase',
               color: C.gold,
-              letterSpacing: '0.01em',
-              lineHeight: 0.92,
-            }}>GREEN</span>
+            }}>Fan-Built • Fan-Run • Fan-First</span>
+          </div>
 
-            <span style={{
-              display: 'block',
-              fontFamily: F.anton,
-              fontSize: 'clamp(48px, 8vw, 96px)',
-              color: C.bone,
-              letterSpacing: '0.03em',
-              lineHeight: 1.05,
-            }}>AND</span>
-
-            <span style={{
-              display: 'block',
-              fontFamily: F.anton,
-              fontSize: 'clamp(80px, 14vw, 160px)',
-              color: C.gold,
-              letterSpacing: '0.01em',
-              lineHeight: 0.92,
-            }}>GOLD</span>
-
-            <span style={{
-              display: 'block',
-              fontFamily: F.anton,
-              fontSize: 'clamp(48px, 8vw, 96px)',
-              color: C.bone,
-              letterSpacing: '0.03em',
-              lineHeight: 1.05,
-            }}>FOREVER</span>
+          {/* HERO TEXT */}
+          <h1 className="hero-text" style={{
+            fontFamily: "'Oswald', sans-serif",
+            fontSize: 'clamp(4rem, 10vw, 8rem)',
+            fontWeight: 700,
+            lineHeight: 0.92,
+            textTransform: 'uppercase',
+            letterSpacing: '0.02em',
+            marginBottom: '2rem',
+            animation: 'slide-up 0.5s ease-out 0.1s both',
+          }}>
+            <span style={{ color: C.bone }}>THIS IS</span><br />
+            <span style={{ color: C.gold, textShadow: '0 0 60px rgba(255,215,0,0.2)' }}>OUR TEAM</span>
           </h1>
 
-          <p style={{
-            fontFamily: F.libre,
-            fontSize: 'clamp(1rem, 1.8vw, 1.3rem)',
-            color: C.bone,
-            opacity: 0.85,
-            maxWidth: '520px',
-            lineHeight: 1.7,
-            marginBottom: '1.5rem',
+          <p className="hero-sub" style={{
+            fontFamily: "'Barlow Condensed', sans-serif",
+            fontSize: '1.4rem',
+            fontWeight: 400,
+            lineHeight: 1.5,
+            color: 'rgba(245,240,232,0.6)',
+            maxWidth: '550px',
+            marginBottom: '3rem',
+            animation: 'slide-up 0.5s ease-out 0.2s both',
           }}>
-            Oakland. Sacramento. Las Vegas. We followed our team here.
+            The loudest corner of Las Vegas Athletics fandom. Community stories, game day guides, tailgate intel, and the fan perspective corporate media won&apos;t give you.
           </p>
 
-          <p style={{
-            fontFamily: F.mono,
-            fontSize: '0.62rem',
-            color: C.gold,
-            letterSpacing: '0.28em',
-            textTransform: 'uppercase',
-            opacity: 0.7,
-          }}>
-            EST. 1901 -- LV ATHLETICS NATION -- THE FAN COMMUNITY
-          </p>
-        </div>
-
-        {/* Gold rule at hero bottom */}
-        <div style={{
-          position: 'absolute',
-          bottom: 0, left: 0, right: 0,
-          height: '2px',
-          background: C.gold,
-          zIndex: 2,
-        }} />
-      </section>
-
-      {/* ======================================
-          SECTION 2: MIGRATION TIMELINE
-      ====================================== */}
-      <section style={{
-        background: C.bone,
-        padding: '5rem 5vw 5rem',
-        overflow: 'hidden',
-      }}>
-        <p style={{
-          fontFamily: F.mono,
-          fontSize: '0.65rem',
-          color: C.concrete,
-          letterSpacing: '0.35em',
-          textTransform: 'uppercase',
-          marginBottom: '4rem',
-        }}>The Migration</p>
-
-        {/* Timeline row */}
-        <div style={{
-          display: 'flex',
-          alignItems: 'flex-start',
-          overflowX: 'auto',
-          paddingBottom: '1rem',
-          gap: 0,
-        }}>
-          {/* -- PHILADELPHIA -- */}
-          <div style={{ flex: 1, minWidth: '160px', position: 'relative', paddingTop: '1rem' }}>
-            {/* connector line left half */}
-            <div style={{
-              position: 'absolute',
-              top: 'calc(1rem + 9px)',
-              left: 0, right: '50%',
-              height: '2px',
-              background: C.concrete,
-              opacity: 0.3,
-            }} />
-            {/* connector line right half */}
-            <div style={{
-              position: 'absolute',
-              top: 'calc(1rem + 9px)',
-              left: '50%', right: 0,
-              height: '2px',
-              background: C.concrete,
-              opacity: 0.3,
-            }} />
-            {/* dot */}
-            <div style={{
-              width: '18px', height: '18px',
-              borderRadius: '50%',
-              background: C.concrete,
-              margin: '0 auto 1.25rem',
-              position: 'relative', zIndex: 1,
-              opacity: 0.55,
-            }} />
-            <div style={{ textAlign: 'center', padding: '0 1rem' }}>
-              <div style={{
-                fontFamily: F.anton,
-                fontSize: 'clamp(0.85rem, 1.4vw, 1.1rem)',
-                color: C.dark,
-                opacity: 0.45,
-                letterSpacing: '0.04em',
-                marginBottom: '0.4rem',
-              }}>PHILADELPHIA</div>
-              <div style={{
-                fontFamily: F.mono,
-                fontSize: '0.7rem',
-                color: C.concrete,
-                letterSpacing: '0.15em',
-                opacity: 0.7,
-              }}>1901</div>
-            </div>
-          </div>
-
-          {/* -- KANSAS CITY -- */}
-          <div style={{ flex: 1, minWidth: '160px', position: 'relative', paddingTop: '1rem' }}>
-            <div style={{
-              position: 'absolute',
-              top: 'calc(1rem + 9px)',
-              left: 0, right: '50%',
-              height: '2px',
-              background: C.concrete,
-              opacity: 0.3,
-            }} />
-            <div style={{
-              position: 'absolute',
-              top: 'calc(1rem + 9px)',
-              left: '50%', right: 0,
-              height: '2px',
-              background: C.concrete,
-              opacity: 0.3,
-            }} />
-            <div style={{
-              width: '18px', height: '18px',
-              borderRadius: '50%',
-              background: C.concrete,
-              margin: '0 auto 1.25rem',
-              position: 'relative', zIndex: 1,
-              opacity: 0.55,
-            }} />
-            <div style={{ textAlign: 'center', padding: '0 1rem' }}>
-              <div style={{
-                fontFamily: F.anton,
-                fontSize: 'clamp(0.85rem, 1.4vw, 1.1rem)',
-                color: C.dark,
-                opacity: 0.45,
-                letterSpacing: '0.04em',
-                marginBottom: '0.4rem',
-              }}>KANSAS CITY</div>
-              <div style={{
-                fontFamily: F.mono,
-                fontSize: '0.7rem',
-                color: C.concrete,
-                letterSpacing: '0.15em',
-                opacity: 0.7,
-              }}>1955</div>
-            </div>
-          </div>
-
-          {/* -- OAKLAND -- */}
-          <div style={{ flex: 1, minWidth: '200px', position: 'relative', paddingTop: '1rem' }}>
-            <div style={{
-              position: 'absolute',
-              top: 'calc(1rem + 11px)',
-              left: 0, right: '50%',
-              height: '2px',
-              background: C.concrete,
-              opacity: 0.3,
-            }} />
-            <div style={{
-              position: 'absolute',
-              top: 'calc(1rem + 11px)',
-              left: '50%', right: 0,
-              height: '3px',
-              background: C.red,
-              opacity: 0.5,
-            }} />
-            {/* Oakland dot - red */}
-            <div style={{
-              width: '24px', height: '24px',
-              borderRadius: '50%',
-              background: C.red,
-              margin: '0 auto 1.25rem',
-              position: 'relative', zIndex: 1,
-            }} />
-            <div style={{ textAlign: 'center', padding: '0 1rem' }}>
-              <div style={{
-                fontFamily: F.anton,
-                fontSize: 'clamp(1rem, 1.8vw, 1.4rem)',
-                color: C.dark,
-                letterSpacing: '0.04em',
-                marginBottom: '0.4rem',
-              }}>OAKLAND</div>
-              <div style={{
-                fontFamily: F.mono,
-                fontSize: '0.75rem',
-                color: C.dark,
-                letterSpacing: '0.15em',
-                marginBottom: '0.5rem',
-              }}>1968</div>
-              <div style={{
-                fontFamily: F.mono,
-                fontSize: '0.62rem',
-                color: C.red,
-                letterSpacing: '0.2em',
-                textTransform: 'uppercase',
-                fontWeight: 700,
-              }}>47 YEARS</div>
-            </div>
-          </div>
-
-          {/* -- LAS VEGAS -- */}
-          <div style={{ flex: 1, minWidth: '200px', position: 'relative', paddingTop: '1rem' }}>
-            <div style={{
-              position: 'absolute',
-              top: 'calc(1rem + 11px)',
-              left: 0, right: '50%',
-              height: '3px',
+          <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap', animation: 'slide-up 0.5s ease-out 0.3s both' }}>
+            <Link href="/blog" style={{
+              display: 'inline-flex',
+              alignItems: 'center',
+              gap: '0.5rem',
+              fontFamily: "'Oswald', sans-serif",
+              fontSize: '0.9rem',
+              fontWeight: 600,
+              letterSpacing: '0.1em',
+              textTransform: 'uppercase',
+              color: C.dark,
               background: C.gold,
-              opacity: 0.5,
-            }} />
-            {/* Las Vegas dot - gold, pulsing */}
-            <div style={{
-              width: '24px', height: '24px',
-              borderRadius: '50%',
-              background: C.gold,
-              margin: '0 auto 1.25rem',
-              position: 'relative', zIndex: 1,
-              animation: 'pulse-dot 2.2s ease-in-out infinite',
-            }} />
-            <div style={{ textAlign: 'center', padding: '0 1rem' }}>
-              <div style={{
-                fontFamily: F.anton,
-                fontSize: 'clamp(1rem, 1.8vw, 1.4rem)',
-                color: C.dark,
-                letterSpacing: '0.04em',
-                marginBottom: '0.4rem',
-              }}>LAS VEGAS</div>
-              <div style={{
-                fontFamily: F.mono,
-                fontSize: '0.75rem',
-                color: C.dark,
-                letterSpacing: '0.15em',
-                marginBottom: '0.5rem',
-              }}>2028</div>
-              <div style={{
-                fontFamily: F.mono,
-                fontSize: '0.62rem',
-                color: C.gold,
-                letterSpacing: '0.2em',
-                textTransform: 'uppercase',
-                fontWeight: 700,
-                animation: 'pulse-label 2.2s ease-in-out infinite',
-              }}>WE MADE IT</div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ======================================
-          SECTION 3: THE NATION
-      ====================================== */}
-      <section style={{
-        background: C.dark,
-        padding: '6rem 5vw',
-        borderTop: `1px solid rgba(212,168,67,0.12)`,
-        borderBottom: `1px solid rgba(212,168,67,0.12)`,
-      }}>
-        <div style={{
-          maxWidth: '1200px',
-          margin: '0 auto',
-          display: 'grid',
-          gridTemplateColumns: '2fr 3fr',
-          gap: '5rem',
-          alignItems: 'start',
-        }}>
-          {/* Left: big number + body */}
-          <div>
-            <div style={{
-              fontFamily: F.anton,
-              fontSize: 'clamp(4rem, 9vw, 8rem)',
+              padding: '0.85rem 2rem',
+              transition: 'transform 0.2s',
+            }}>Read Fan Stories →</Link>
+            <a href="https://www.stubhub.com/las-vegas-athletics-tickets" target="_blank" rel="noopener" style={{
+              display: 'inline-flex',
+              alignItems: 'center',
+              gap: '0.5rem',
+              fontFamily: "'Oswald', sans-serif",
+              fontSize: '0.9rem',
+              fontWeight: 600,
+              letterSpacing: '0.1em',
+              textTransform: 'uppercase',
               color: C.gold,
-              lineHeight: 0.9,
-              letterSpacing: '-0.01em',
-              marginBottom: '0.75rem',
-            }}>30,000+</div>
-            <div style={{
-              fontFamily: F.libre,
-              fontSize: 'clamp(1rem, 1.4vw, 1.2rem)',
-              color: C.bone,
-              marginBottom: '1.75rem',
-              lineHeight: 1.4,
+              border: '2px solid ' + C.gold,
+              padding: '0.85rem 2rem',
+              background: 'transparent',
+            }}>🎟️ Get Tickets</a>
+          </div>
+        </div>
+      </section>
+
+      {/* ============ SCOREBOARD STATS ============ */}
+      <section className="pad" style={{
+        background: C.dark,
+        padding: '0 3rem',
+      }}>
+        <div className="scoreboard-grid" style={{
+          maxWidth: '1200px',
+          margin: '-3rem auto 0',
+          display: 'grid',
+          gridTemplateColumns: 'repeat(4, 1fr)',
+          position: 'relative',
+          zIndex: 10,
+        }}>
+          {[
+            { num: '21', label: 'Fan Stories', icon: '📝' },
+            { num: '2028', label: 'Opening Day', icon: '🏟️' },
+            { num: '9', label: 'Championships', icon: '🏆' },
+            { num: '∞', label: 'Fan Loyalty', icon: '💚' },
+          ].map(({ num, label, icon }, i) => (
+            <div key={label} style={{
+              background: C.green,
+              border: '1px solid rgba(255,215,0,0.15)',
+              borderRight: i < 3 ? 'none' : '1px solid rgba(255,215,0,0.15)',
+              padding: '2rem 1.5rem',
+              textAlign: 'center',
             }}>
-              Fans Who Made the Trip
+              <div style={{ fontSize: '1.5rem', marginBottom: '0.5rem' }}>{icon}</div>
+              <div style={{
+                fontFamily: "'Oswald', sans-serif",
+                fontSize: 'clamp(2.5rem, 5vw, 3.5rem)',
+                fontWeight: 700,
+                color: C.gold,
+                lineHeight: 1,
+              }}>{num}</div>
+              <div style={{
+                fontFamily: "'Space Mono', monospace",
+                fontSize: '0.55rem',
+                letterSpacing: '0.14em',
+                textTransform: 'uppercase',
+                color: 'rgba(245,240,232,0.5)',
+                marginTop: '0.4rem',
+              }}>{label}</div>
             </div>
-            <p style={{
-              fontFamily: F.inter,
-              fontSize: '0.95rem',
-              color: C.bone,
-              opacity: 0.65,
-              lineHeight: 1.75,
-            }}>
-              This is not a casual fan base. This is a community that watched, waited, and followed.
-              From the Coliseum to the desert.
-            </p>
+          ))}
+        </div>
+      </section>
+
+      {/* ============ FEATURED STORIES ============ */}
+      <section className="pad" style={{
+        background: C.dark,
+        padding: '6rem 3rem',
+      }}>
+        <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
+          <div style={{
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'space-between',
+            marginBottom: '2.5rem',
+            flexWrap: 'wrap',
+            gap: '1rem',
+          }}>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
+              <div style={{
+                width: '4px',
+                height: '32px',
+                background: C.gold,
+              }} />
+              <h2 style={{
+                fontFamily: "'Oswald', sans-serif",
+                fontSize: 'clamp(1.8rem, 3.5vw, 2.5rem)',
+                fontWeight: 700,
+                textTransform: 'uppercase',
+                letterSpacing: '0.04em',
+              }}>Featured Stories</h2>
+            </div>
+            <Link href="/blog" style={{
+              fontFamily: "'Space Mono', monospace",
+              fontSize: '0.65rem',
+              letterSpacing: '0.14em',
+              textTransform: 'uppercase',
+              color: C.gold,
+              borderBottom: '1px solid ' + C.gold,
+              paddingBottom: '2px',
+            }}>View All →</Link>
           </div>
 
-          {/* Right: 3 stat cards */}
-          <div style={{
+          <div className="featured-grid" style={{
             display: 'grid',
-            gridTemplateColumns: '1fr 1fr 1fr',
-            gap: '1px',
-            background: `rgba(212,168,67,0.15)`,
-            border: `1px solid rgba(212,168,67,0.15)`,
+            gridTemplateColumns: '1.5fr 1fr',
+            gap: '1.5rem',
           }}>
-            {[
-              { stat: '0',    label: "Days We Stopped Being A's Fans" },
-              { stat: '3',    label: 'Generations of Green and Gold'   },
-              { stat: '2028', label: 'Year Everything Changes'         },
-            ].map(({ stat, label }) => (
-              <div key={stat} style={{
-                background: C.dark,
-                padding: '2.5rem 1.5rem',
-                textAlign: 'center',
+            {/* LEAD STORY */}
+            <Link href={`/blog/${featured[0].slug}`} className="hover-lift fan-card" style={{
+              background: C.green,
+              padding: '3rem',
+              display: 'flex',
+              flexDirection: 'column',
+              justifyContent: 'flex-end',
+              minHeight: '380px',
+              position: 'relative',
+            }}>
+              <div style={{
+                position: 'absolute',
+                top: '1.5rem',
+                right: '1.5rem',
+                fontFamily: "'Space Mono', monospace",
+                fontSize: '0.55rem',
+                letterSpacing: '0.12em',
+                textTransform: 'uppercase',
+                color: C.gold,
+                background: 'rgba(0,0,0,0.3)',
+                padding: '0.3rem 0.7rem',
+              }}>{featured[0].category}</div>
+              <h3 style={{
+                fontFamily: "'Oswald', sans-serif",
+                fontSize: 'clamp(1.4rem, 2.5vw, 2rem)',
+                fontWeight: 700,
+                lineHeight: 1.1,
+                textTransform: 'uppercase',
+                color: C.bone,
+                marginBottom: '1rem',
+              }}>{featured[0].title}</h3>
+              <p style={{
+                fontFamily: "'Inter', sans-serif",
+                fontSize: '0.85rem',
+                lineHeight: 1.6,
+                color: 'rgba(245,240,232,0.55)',
+                marginBottom: '1.5rem',
+              }}>{featured[0].excerpt}</p>
+              <span style={{
+                fontFamily: "'Barlow Condensed', sans-serif",
+                fontSize: '0.82rem',
+                fontWeight: 600,
+                letterSpacing: '0.1em',
+                textTransform: 'uppercase',
+                color: C.gold,
+              }}>Read Story →</span>
+            </Link>
+
+            {/* SIDE STORIES */}
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
+              {featured.slice(1).map(post => (
+                <Link key={post.slug} href={`/blog/${post.slug}`} className="hover-lift fan-card" style={{
+                  background: '#111310',
+                  padding: '2rem',
+                  flex: 1,
+                  display: 'flex',
+                  flexDirection: 'column',
+                }}>
+                  <div style={{
+                    fontFamily: "'Space Mono', monospace",
+                    fontSize: '0.5rem',
+                    letterSpacing: '0.16em',
+                    textTransform: 'uppercase',
+                    color: C.gold,
+                    marginBottom: '0.6rem',
+                    opacity: 0.7,
+                  }}>{post.category} · {post.readingTime}</div>
+                  <h4 style={{
+                    fontFamily: "'Oswald', sans-serif",
+                    fontSize: '1.1rem',
+                    fontWeight: 600,
+                    lineHeight: 1.2,
+                    textTransform: 'uppercase',
+                    color: C.bone,
+                    flex: 1,
+                    marginBottom: '0.75rem',
+                  }}>{post.title}</h4>
+                  <div style={{
+                    fontFamily: "'Space Mono', monospace",
+                    fontSize: '0.52rem',
+                    color: 'rgba(245,240,232,0.3)',
+                  }}>{post.date}</div>
+                </Link>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ============ THE FAN VOICE — Editorial ============ */}
+      <section className="pad" style={{
+        background: C.gold,
+        padding: '6rem 3rem',
+        position: 'relative',
+      }}>
+        <div style={{ maxWidth: '800px', margin: '0 auto', textAlign: 'center' }}>
+          <div style={{
+            fontFamily: "'Space Mono', monospace",
+            fontSize: '0.6rem',
+            letterSpacing: '0.22em',
+            textTransform: 'uppercase',
+            color: C.green,
+            marginBottom: '1rem',
+          }}>The Fan Voice</div>
+          <h2 style={{
+            fontFamily: "'Oswald', sans-serif",
+            fontSize: 'clamp(2rem, 4.5vw, 3.5rem)',
+            fontWeight: 700,
+            textTransform: 'uppercase',
+            color: C.dark,
+            lineHeight: 1,
+            marginBottom: '2rem',
+          }}>WE DON&apos;T DO<br />CORPORATE SPIN</h2>
+          <p style={{
+            fontFamily: "'Inter', sans-serif",
+            fontSize: '1.05rem',
+            lineHeight: 1.7,
+            color: 'rgba(10,12,8,0.7)',
+            maxWidth: '600px',
+            margin: '0 auto 2rem',
+          }}>
+            This isn&apos;t an official team site. We&apos;re the fans who drove to the Coliseum on a Tuesday night in September when the team was 20 games out. We&apos;re the ones who care about the community, not the shareholders. The real stories. The real takes. The real love for green and gold.
+          </p>
+          <div style={{
+            display: 'flex',
+            justifyContent: 'center',
+            gap: '2rem',
+            flexWrap: 'wrap',
+          }}>
+            {['Unfiltered Takes', 'Community First', 'Fan-Written'].map(tag => (
+              <div key={tag} style={{
+                fontFamily: "'Barlow Condensed', sans-serif",
+                fontSize: '0.85rem',
+                fontWeight: 600,
+                letterSpacing: '0.08em',
+                textTransform: 'uppercase',
+                color: C.green,
+                display: 'flex',
+                alignItems: 'center',
+                gap: '0.4rem',
               }}>
-                <div style={{
-                  fontFamily: F.anton,
-                  fontSize: 'clamp(2.5rem, 4vw, 4rem)',
-                  color: C.gold,
-                  lineHeight: 1,
-                  marginBottom: '1rem',
-                }}>{stat}</div>
-                <div style={{
-                  fontFamily: F.mono,
-                  fontSize: '0.6rem',
-                  color: C.bone,
-                  opacity: 0.55,
-                  letterSpacing: '0.15em',
-                  textTransform: 'uppercase',
-                  lineHeight: 1.5,
-                }}>{label}</div>
+                <span style={{ color: C.green }}>✓</span> {tag}
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* ======================================
-          SECTION 4: LATEST FROM THE BLOG
-      ====================================== */}
-      <section style={{
+      {/* ============ MORE STORIES GRID ============ */}
+      <section className="pad" style={{
         background: C.dark,
-        padding: '6rem 5vw',
+        padding: '6rem 3rem',
       }}>
         <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
           <div style={{
             display: 'flex',
-            alignItems: 'baseline',
+            alignItems: 'center',
             justifyContent: 'space-between',
-            marginBottom: '3rem',
-            gap: '2rem',
+            marginBottom: '2rem',
             flexWrap: 'wrap',
+            gap: '1rem',
           }}>
-            <h2 style={{
-              fontFamily: F.anton,
-              fontSize: 'clamp(1.8rem, 3.5vw, 3rem)',
-              color: C.bone,
-              letterSpacing: '0.03em',
-              lineHeight: 1,
-            }}>LATEST FROM THE NATION</h2>
-            <Link href="/blog" style={{
-              fontFamily: F.mono,
-              fontSize: '0.65rem',
-              color: C.gold,
-              letterSpacing: '0.25em',
-              textTransform: 'uppercase',
-              opacity: 0.8,
-            }}>
-              ALL POSTS &rarr;
-            </Link>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
+              <div style={{ width: '4px', height: '32px', background: C.gold }} />
+              <h2 style={{
+                fontFamily: "'Oswald', sans-serif",
+                fontSize: '1.8rem',
+                fontWeight: 700,
+                textTransform: 'uppercase',
+              }}>More From The Nation</h2>
+            </div>
+
+            <div style={{ display: 'flex', gap: '0.4rem', flexWrap: 'wrap' }}>
+              <button className={`filter-btn ${activeFilter === 'all' ? 'active' : ''}`} onClick={() => setActiveFilter('all')}>All</button>
+              {categories.slice(0, 3).map(cat => (
+                <button key={cat} className={`filter-btn ${activeFilter === cat ? 'active' : ''}`} onClick={() => setActiveFilter(cat)}>{cat}</button>
+              ))}
+            </div>
           </div>
 
-          {/* 3-column card grid */}
-          <div style={{
+          <div className="grid-3" style={{
             display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
-            gap: '2px',
-            background: `rgba(212,168,67,0.1)`,
+            gridTemplateColumns: 'repeat(3, 1fr)',
+            gap: '1.5rem',
           }}>
-            {featured.map((post) => (
-              <Link
-                key={post.slug}
-                href={`/blog/${post.slug}`}
-                className="blog-card"
-                style={{
-                  background: C.bone,
-                  padding: '2.5rem 2rem',
-                  display: 'block',
-                  color: C.dark,
-                  cursor: 'pointer',
-                }}
-              >
-                {/* Category badge */}
-                <span style={{
-                  display: 'inline-block',
-                  background: C.gold,
-                  color: C.dark,
-                  fontFamily: F.mono,
-                  fontSize: '0.58rem',
-                  letterSpacing: '0.2em',
+            {(activeFilter === 'all' ? more : posts.filter(p => p.category === activeFilter).slice(0, 6)).map(post => (
+              <Link key={post.slug} href={`/blog/${post.slug}`} className="hover-lift fan-card" style={{
+                background: '#111310',
+                padding: '2rem',
+                display: 'flex',
+                flexDirection: 'column',
+              }}>
+                <div style={{
+                  fontFamily: "'Space Mono', monospace",
+                  fontSize: '0.5rem',
+                  letterSpacing: '0.14em',
                   textTransform: 'uppercase',
-                  padding: '0.2rem 0.75rem',
-                  marginBottom: '1.25rem',
-                  fontWeight: 700,
-                }}>
-                  {post.category}
-                </span>
-
+                  color: C.gold,
+                  marginBottom: '0.75rem',
+                  opacity: 0.6,
+                }}>{post.category}</div>
                 <h3 style={{
-                  fontFamily: F.anton,
-                  fontSize: 'clamp(1.1rem, 1.8vw, 1.5rem)',
-                  color: C.dark,
-                  lineHeight: 1.1,
-                  letterSpacing: '0.02em',
-                  marginBottom: '1rem',
-                }}>
-                  {post.title}
-                </h3>
-
-                <p style={{
-                  fontFamily: F.inter,
-                  fontSize: '0.88rem',
-                  color: C.dark,
-                  opacity: 0.65,
-                  lineHeight: 1.65,
-                  marginBottom: '1.75rem',
-                  display: '-webkit-box',
-                  WebkitLineClamp: 3,
-                  WebkitBoxOrient: 'vertical',
-                  overflow: 'hidden',
-                }}>
-                  {post.excerpt}
-                </p>
-
-                <span className="read-link" style={{
-                  fontFamily: F.mono,
-                  fontSize: '0.65rem',
-                  color: C.green,
-                  letterSpacing: '0.25em',
+                  fontFamily: "'Oswald', sans-serif",
+                  fontSize: '1rem',
+                  fontWeight: 600,
+                  lineHeight: 1.2,
                   textTransform: 'uppercase',
-                  fontWeight: 700,
-                  display: 'inline-block',
+                  color: C.bone,
+                  flex: 1,
+                  marginBottom: '1rem',
+                }}>{post.title}</h3>
+                <div style={{
+                  display: 'flex',
+                  justifyContent: 'space-between',
+                  alignItems: 'center',
                 }}>
-                  READ
-                </span>
+                  <span style={{
+                    fontFamily: "'Space Mono', monospace",
+                    fontSize: '0.5rem',
+                    color: 'rgba(245,240,232,0.3)',
+                  }}>{post.date}</span>
+                  <span style={{
+                    fontFamily: "'Barlow Condensed', sans-serif",
+                    fontSize: '0.72rem',
+                    fontWeight: 600,
+                    color: C.gold,
+                    letterSpacing: '0.08em',
+                    textTransform: 'uppercase',
+                  }}>Read →</span>
+                </div>
               </Link>
+            ))}
+          </div>
+
+          <div style={{ textAlign: 'center', marginTop: '3rem' }}>
+            <Link href="/blog" style={{
+              fontFamily: "'Oswald', sans-serif",
+              fontSize: '0.9rem',
+              fontWeight: 600,
+              letterSpacing: '0.1em',
+              textTransform: 'uppercase',
+              color: C.dark,
+              background: C.gold,
+              padding: '0.85rem 2.5rem',
+              display: 'inline-block',
+              transition: 'transform 0.2s',
+            }}>View All Stories</Link>
+          </div>
+        </div>
+      </section>
+
+      {/* ============ TICKETS & GEAR ============ */}
+      <section className="pad" style={{
+        background: C.green,
+        padding: '5rem 3rem',
+        borderTop: '3px solid ' + C.gold,
+        borderBottom: '3px solid ' + C.gold,
+      }}>
+        <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
+          <div style={{ textAlign: 'center', marginBottom: '3rem' }}>
+            <h2 style={{
+              fontFamily: "'Oswald', sans-serif",
+              fontSize: 'clamp(2rem, 4vw, 3rem)',
+              fontWeight: 700,
+              textTransform: 'uppercase',
+              color: C.gold,
+              marginBottom: '0.5rem',
+            }}>GEAR UP FOR GAME DAY</h2>
+            <p style={{
+              fontFamily: "'Inter', sans-serif",
+              fontSize: '0.85rem',
+              color: 'rgba(245,240,232,0.5)',
+              maxWidth: '500px',
+              margin: '0 auto',
+            }}>
+              Support independent fan coverage. Purchases through our links keep the Nation running.
+            </p>
+          </div>
+
+          <div className="grid-3" style={{
+            display: 'grid',
+            gridTemplateColumns: 'repeat(3, 1fr)',
+            gap: '1.5rem',
+          }}>
+            {[
+              { name: 'StubHub Tickets', url: 'https://www.stubhub.com/las-vegas-athletics-tickets/?PCID=lvathletics-20', emoji: '🎟️', desc: 'Find seats for every home game' },
+              { name: 'SeatGeek', url: 'https://www.seatgeek.com/athletics-tickets?aid=lvathletics-20', emoji: '🎫', desc: 'Best deals on A\'s tickets' },
+              { name: 'Fanatics Gear', url: 'https://www.fanatics.com/mlb/oakland-athletics/o-2793+t-53395338?aff=lvathletics-20', emoji: '👕', desc: 'Jerseys, hats, and fan gear' },
+            ].map(({ name, url, emoji, desc }) => (
+              <a key={name} href={url} target="_blank" rel="noopener" className="hover-lift" style={{
+                background: 'rgba(0,0,0,0.3)',
+                border: '1px solid rgba(255,215,0,0.2)',
+                padding: '2rem',
+                textAlign: 'center',
+                display: 'block',
+              }}>
+                <div style={{ fontSize: '2.5rem', marginBottom: '1rem' }}>{emoji}</div>
+                <div style={{
+                  fontFamily: "'Oswald', sans-serif",
+                  fontSize: '1.1rem',
+                  fontWeight: 600,
+                  textTransform: 'uppercase',
+                  color: C.gold,
+                  marginBottom: '0.5rem',
+                }}>{name}</div>
+                <div style={{
+                  fontFamily: "'Inter', sans-serif",
+                  fontSize: '0.8rem',
+                  color: 'rgba(245,240,232,0.45)',
+                }}>{desc}</div>
+              </a>
             ))}
           </div>
         </div>
       </section>
 
-      {/* ======================================
-          SECTION 5: TIFO / JOIN THE NATION
-      ====================================== */}
-      <section id="join" style={{
-        background: C.green,
-        padding: '8rem 5vw',
-        textAlign: 'center',
-        position: 'relative',
-        overflow: 'hidden',
+      {/* ============ NEWSLETTER ============ */}
+      <section className="pad" style={{
+        background: C.dark,
+        padding: '5rem 3rem',
       }}>
-        {/* Background texture - large faded text */}
-        <div aria-hidden="true" style={{
-          position: 'absolute',
-          top: '50%', left: '50%',
-          transform: 'translate(-50%, -50%)',
-          fontFamily: F.anton,
-          fontSize: 'clamp(200px, 35vw, 500px)',
-          color: '#000',
-          opacity: 0.06,
-          lineHeight: 1,
-          whiteSpace: 'nowrap',
-          userSelect: 'none',
-          pointerEvents: 'none',
-        }}>NATION</div>
-
-        <div style={{ position: 'relative', zIndex: 1 }}>
+        <div style={{
+          maxWidth: '650px',
+          margin: '0 auto',
+          textAlign: 'center',
+        }}>
+          <div style={{ fontSize: '2.5rem', marginBottom: '1rem' }}>📬</div>
           <h2 style={{
-            fontFamily: F.anton,
-            fontSize: 'clamp(3rem, 8vw, 8rem)',
-            color: C.bone,
-            letterSpacing: '0.03em',
-            lineHeight: 0.92,
-            marginBottom: '1.5rem',
-          }}>
-            JOIN THE<br />NATION
-          </h2>
-
-          <p style={{
-            fontFamily: F.libre,
-            fontSize: 'clamp(1rem, 1.5vw, 1.2rem)',
-            color: C.bone,
-            opacity: 0.8,
-            marginBottom: '3rem',
-            maxWidth: '400px',
-            margin: '0 auto 3rem',
-            lineHeight: 1.65,
-          }}>
-            Free. No nonsense. Just fans who give a damn.
-          </p>
-
-          <a href="#join" style={{
-            display: 'inline-block',
-            background: C.gold,
-            color: C.dark,
-            fontFamily: F.inter,
-            fontSize: '0.9rem',
+            fontFamily: "'Oswald', sans-serif",
+            fontSize: '2rem',
             fontWeight: 700,
-            letterSpacing: '0.12em',
             textTransform: 'uppercase',
-            padding: '1.1rem 3.5rem',
-            borderRadius: 0,
-            cursor: 'pointer',
+            color: C.gold,
+            marginBottom: '0.75rem',
+          }}>Join The Nation</h2>
+          <p style={{
+            fontFamily: "'Inter', sans-serif",
+            fontSize: '0.9rem',
+            color: 'rgba(245,240,232,0.5)',
+            marginBottom: '2rem',
+            lineHeight: 1.6,
           }}>
-            I'M IN
-          </a>
+            Game day alerts. Fan stories. Tailgate intel. No spam, no corporate nonsense.
+          </p>
+          <form onSubmit={(e) => e.preventDefault()} style={{
+            display: 'flex',
+            gap: 0,
+            maxWidth: '450px',
+            margin: '0 auto',
+          }}>
+            <input
+              type="email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              placeholder="your@email.com"
+              style={{
+                flex: 1,
+                padding: '0.85rem 1.2rem',
+                background: '#111310',
+                border: '2px solid rgba(255,215,0,0.2)',
+                borderRight: 'none',
+                color: C.bone,
+                fontFamily: "'Space Mono', monospace",
+                fontSize: '0.78rem',
+                outline: 'none',
+              }}
+            />
+            <button type="submit" style={{
+              padding: '0.85rem 1.5rem',
+              background: C.gold,
+              border: '2px solid ' + C.gold,
+              color: C.dark,
+              fontFamily: "'Oswald', sans-serif",
+              fontSize: '0.85rem',
+              fontWeight: 600,
+              letterSpacing: '0.08em',
+              textTransform: 'uppercase',
+              cursor: 'pointer',
+            }}>Join</button>
+          </form>
         </div>
       </section>
+
+      {/* ============ NETWORK LINKS ============ */}
+      <section className="pad" style={{
+        background: '#0C0E0A',
+        padding: '4rem 3rem',
+        borderTop: '1px solid rgba(255,215,0,0.08)',
+      }}>
+        <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
+          <div style={{
+            fontFamily: "'Space Mono', monospace",
+            fontSize: '0.55rem',
+            letterSpacing: '0.2em',
+            textTransform: 'uppercase',
+            color: C.gold,
+            marginBottom: '1.5rem',
+            opacity: 0.6,
+          }}>The LV Athletics Network</div>
+          <div className="grid-2" style={{
+            display: 'grid',
+            gridTemplateColumns: '1fr 1fr',
+            gap: '1rem',
+          }}>
+            {[
+              { name: 'TheLVAs.com', url: 'https://thelvas.com', desc: 'The flagship — news, schedules, and fan hub' },
+              { name: 'TheLVAthletics.com', url: 'https://thelvathletics.com', desc: 'Premium editorial coverage and deep analysis' },
+            ].map(({ name, url, desc }) => (
+              <a key={name} href={url} target="_blank" rel="noopener" className="mega-link" style={{
+                border: '1px solid rgba(255,215,0,0.1)',
+                display: 'flex',
+                justifyContent: 'space-between',
+                alignItems: 'center',
+              }}>
+                <div>
+                  <div style={{
+                    fontFamily: "'Oswald', sans-serif",
+                    fontSize: '1rem',
+                    fontWeight: 600,
+                    color: C.gold,
+                    textTransform: 'uppercase',
+                    marginBottom: '0.25rem',
+                  }}>{name}</div>
+                  <div style={{
+                    fontFamily: "'Inter', sans-serif",
+                    fontSize: '0.78rem',
+                    color: 'rgba(245,240,232,0.4)',
+                  }}>{desc}</div>
+                </div>
+                <span className="arrow-icon" style={{ color: C.gold, fontSize: '1.2rem' }}>→</span>
+              </a>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ============ FOOTER ============ */}
+      <footer className="pad" style={{
+        background: C.dark,
+        borderTop: '2px solid ' + C.gold,
+        padding: '4rem 3rem 2.5rem',
+      }}>
+        <div className="footer-cols" style={{
+          maxWidth: '1200px',
+          margin: '0 auto',
+          display: 'grid',
+          gridTemplateColumns: '2fr 1fr 1fr',
+          gap: '3rem',
+          marginBottom: '3rem',
+        }}>
+          <div>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', marginBottom: '1rem' }}>
+              <div style={{
+                background: C.green,
+                width: '32px',
+                height: '32px',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                fontFamily: "'Oswald', sans-serif",
+                fontSize: '1rem',
+                fontWeight: 700,
+                color: C.gold,
+                border: '2px solid ' + C.gold,
+              }}>N</div>
+              <span style={{ fontFamily: "'Oswald', sans-serif", fontSize: '0.9rem', fontWeight: 700, color: C.gold, letterSpacing: '0.08em', textTransform: 'uppercase' }}>LV Athletics Nation</span>
+            </div>
+            <p style={{
+              fontFamily: "'Inter', sans-serif",
+              fontSize: '0.8rem',
+              color: 'rgba(245,240,232,0.35)',
+              lineHeight: 1.65,
+              maxWidth: '340px',
+            }}>The fan community for the Las Vegas Athletics. Independent. Unfiltered. Not affiliated with the Athletics organization or MLB.</p>
+          </div>
+
+          <div>
+            <div style={{ fontFamily: "'Space Mono', monospace", fontSize: '0.55rem', letterSpacing: '0.16em', textTransform: 'uppercase', color: C.gold, marginBottom: '1rem' }}>Sections</div>
+            {['All Stories', 'Community', 'Game Day', 'Fan Guide', 'Tailgate'].map(link => (
+              <Link key={link} href="/blog" style={{
+                display: 'block',
+                fontFamily: "'Inter', sans-serif",
+                fontSize: '0.8rem',
+                color: 'rgba(245,240,232,0.4)',
+                marginBottom: '0.5rem',
+              }}>{link}</Link>
+            ))}
+          </div>
+
+          <div>
+            <div style={{ fontFamily: "'Space Mono', monospace", fontSize: '0.55rem', letterSpacing: '0.16em', textTransform: 'uppercase', color: C.gold, marginBottom: '1rem' }}>Affiliate Links</div>
+            {[
+              ['StubHub', 'https://www.stubhub.com/las-vegas-athletics-tickets'],
+              ['SeatGeek', 'https://www.seatgeek.com/athletics-tickets'],
+              ['Fanatics', 'https://www.fanatics.com/mlb/oakland-athletics'],
+            ].map(([name, url]) => (
+              <a key={name} href={url} target="_blank" rel="noopener" style={{
+                display: 'block',
+                fontFamily: "'Inter', sans-serif",
+                fontSize: '0.8rem',
+                color: 'rgba(245,240,232,0.4)',
+                marginBottom: '0.5rem',
+              }}>{name}</a>
+            ))}
+          </div>
+        </div>
+
+        <div style={{
+          borderTop: '1px solid rgba(255,215,0,0.06)',
+          paddingTop: '1.5rem',
+          textAlign: 'center',
+        }}>
+          <p style={{
+            fontFamily: "'Space Mono', monospace",
+            fontSize: '0.52rem',
+            letterSpacing: '0.1em',
+            color: 'rgba(245,240,232,0.15)',
+          }}>&copy; 2026 LV Athletics Nation — Fan site. Not affiliated with the Athletics organization or MLB. Oakland forever. Vegas forever.</p>
+        </div>
+      </footer>
     </>
   )
 }
