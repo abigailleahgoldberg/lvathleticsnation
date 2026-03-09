@@ -1,9 +1,7 @@
+"use client"
+
 import Link from 'next/link'
 
-export const metadata = {
-  title: 'LV Athletics Nation -- Oakland to Las Vegas A\'s Coverage',
-  description: 'Long-form coverage of the Athletics relocation. From Oakland\'s grief to Sacramento\'s pit stop to Las Vegas\'s future.',
-}
 
 const stories = [
   { slug: 'complete-story-as-relocation-oakland-to-vegas', tag: 'The Full Story', title: 'Oakland to Vegas: The Complete Story', desc: 'Failed ballpark deals, Fisher\'s decision, the MLB vote, and what comes next. Everything in one place.' },
