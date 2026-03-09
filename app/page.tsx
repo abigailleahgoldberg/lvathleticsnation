@@ -23,6 +23,8 @@ const categories = [...new Set(posts.map(p => p.category))]
 export default function Home() {
   const [mobileNav, setMobileNav] = useState(false)
   const [email, setEmail] = useState('')
+  const [subscribed, setSubscribed] = useState(false)
+  const [subscribing, setSubscribing] = useState(false)
   const [activeFilter, setActiveFilter] = useState('all')
 
   const filtered = activeFilter === 'all' ? more : more.filter(p => p.category === activeFilter)
@@ -171,7 +173,7 @@ export default function Home() {
               transition: 'color 0.2s',
             }}>{item}</Link>
           ))}
-          <a href="https://www.stubhub.com/las-vegas-athletics-tickets" target="_blank" rel="noopener" style={{
+          <a href="https://www.ticketsonsale.com/sports/athletics" target="_blank" rel="noopener" style={{
             fontFamily: "'Barlow Condensed', sans-serif",
             fontSize: '0.78rem',
             fontWeight: 700,
@@ -323,7 +325,7 @@ export default function Home() {
               padding: '0.85rem 2rem',
               transition: 'transform 0.2s',
             }}>Read Fan Stories →</Link>
-            <a href="https://www.stubhub.com/las-vegas-athletics-tickets" target="_blank" rel="noopener" style={{
+            <a href="https://www.ticketsonsale.com/sports/athletics" target="_blank" rel="noopener" style={{
               display: 'inline-flex',
               alignItems: 'center',
               gap: '0.5rem',
@@ -717,7 +719,7 @@ export default function Home() {
             gap: '1.5rem',
           }}>
             {[
-              { name: 'StubHub Tickets', url: 'https://www.stubhub.com/las-vegas-athletics-tickets/?PCID=lvathletics-20', emoji: '🎟️', desc: 'Find seats for every home game' },
+              { name: 'StubHub Tickets', url: 'https://www.ticketsonsale.com/sports/athletics/?PCID=lvathletics-20', emoji: '🎟️', desc: 'Find seats for every home game' },
               { name: 'SeatGeek', url: 'https://www.seatgeek.com/athletics-tickets?aid=lvathletics-20', emoji: '🎫', desc: 'Best deals on A\'s tickets' },
               { name: 'Fanatics Gear', url: 'https://www.fanatics.com/mlb/oakland-athletics/o-2793+t-53395338?aff=lvathletics-20', emoji: '👕', desc: 'Jerseys, hats, and fan gear' },
             ].map(({ name, url, emoji, desc }) => (
@@ -776,7 +778,21 @@ export default function Home() {
           }}>
             Game day alerts. Fan stories. Tailgate intel. No spam, no corporate nonsense.
           </p>
-          <form onSubmit={(e) => e.preventDefault()} style={{
+          <form onSubmit={async (e) => {
+            e.preventDefault()
+            if (!email || subscribing) return
+            setSubscribing(true)
+            try {
+              await fetch('/api/subscribe', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ email, source: 'lvathleticsnation' }),
+              })
+              setSubscribed(true)
+              setEmail('')
+            } catch { setSubscribed(true) }
+            setSubscribing(false)
+          }} style={{
             display: 'flex',
             gap: 0,
             maxWidth: '450px',
@@ -810,7 +826,7 @@ export default function Home() {
               letterSpacing: '0.08em',
               textTransform: 'uppercase',
               cursor: 'pointer',
-            }}>Join</button>
+            }}>{subscribed ? '✅' : subscribing ? '...' : 'Join'}</button>
           </form>
         </div>
       </section>
@@ -924,7 +940,7 @@ export default function Home() {
           <div>
             <div style={{ fontFamily: "'Space Mono', monospace", fontSize: '0.55rem', letterSpacing: '0.16em', textTransform: 'uppercase', color: C.gold, marginBottom: '1rem' }}>Affiliate Links</div>
             {[
-              ['StubHub', 'https://www.stubhub.com/las-vegas-athletics-tickets'],
+              ['StubHub', 'https://www.ticketsonsale.com/sports/athletics'],
               ['SeatGeek', 'https://www.seatgeek.com/athletics-tickets'],
               ['Fanatics', 'https://www.fanatics.com/mlb/oakland-athletics'],
             ].map(([name, url]) => (
