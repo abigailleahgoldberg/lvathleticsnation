@@ -1,11 +1,34 @@
+export type Post = {
+  slug: string;
+  title: string;
+  excerpt: string;
+  date: string;
+  category: string;
+  emoji?: string;
+  readingTime?: string;
+  content: string;
+};
 
+const affiliateBlock = `
+<div class="affiliate-block" style="background:#111009;border:1px solid rgba(239,178,30,0.3);border-radius:8px;padding:24px;margin-top:40px;">
+  <div style="font-family:Arial,sans-serif;font-size:0.65rem;letter-spacing:0.14em;text-transform:uppercase;color:#EFB21E;margin-bottom:12px;">Tickets &amp; Gear</div>
+  <p style="font-size:0.9rem;margin-bottom:16px;opacity:0.85;">Find Las Vegas A's tickets and gear through our affiliate partners. Purchases support independent coverage at no extra cost to you.</p>
+  <div style="display:flex;flex-wrap:wrap;gap:12px;">
+    <a href="https://www.stubhub.com/las-vegas-athletics-tickets/" target="_blank" rel="noopener" style="display:inline-block;padding:10px 20px;background:#EFB21E;color:#0A0800;font-family:Arial,sans-serif;font-weight:bold;font-size:0.85rem;border-radius:4px;text-decoration:none;">Find Tickets on StubHub</a>
+    <a href="https://www.fanatics.com/mlb/oakland-athletics/o-2793+t-53395338" target="_blank" rel="noopener" style="display:inline-block;padding:10px 20px;background:#003831;color:#FAFAF8;font-family:Arial,sans-serif;font-weight:bold;font-size:0.85rem;border-radius:4px;text-decoration:none;border:1px solid #EFB21E;">Shop Gear on Fanatics</a>
+  </div>
+</div>
+`;
+
+export const posts: Post[] = [
+  {
       slug: "las-vegas-as-spring-training-2027-guide",
     title: "Complete Guide to Las Vegas A's Spring Training 2027",
     excerpt: "Everything Vegas fans need to know about the Athletics' 2027 Spring Training: facility locations, tickets, travel, and autograph tips.",
     date: "March 9, 2026",
     category: "Spring Training",
-    emoji: "🌵"
-    readingTime: "12 min read",,
+    emoji: "🌵",
+    readingTime: "12 min read",
     content: `
 <h2>The Desert Connection: From the Strip to the Cactus League</h2>
 <p>As the construction of our new jewel-box stadium on the Strip reaches its final stages, Las Vegas A's fans are already looking south for their first taste of the 2027 season. Spring Training in Arizona—the legendary Cactus League—is about to become a mandatory annual pilgrimage for the 702 faithful. For those of us who have spent years watching the desert heat bake the concrete, there's something poetic about seeing our boys of summer gear up in the Arizona sun before heading up Highway 93 to the bright lights of Vegas.</p>
