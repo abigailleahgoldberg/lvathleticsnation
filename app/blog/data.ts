@@ -244,6 +244,212 @@ ${affiliateBlock}
   },
 ];
 
+  {
+    slug: "welcome-to-lv-athletics-nation",
+    title: "Welcome to LV Athletics Nation: Your Home for Las Vegas A's Coverage",
+    excerpt: "A manifesto. What this community is, what we believe, and why we built this site for the Las Vegas A's faithful.",
+    date: "March 15, 2026",
+    category: "Community",
+    emoji: "🏟️",
+    readingTime: "9 min read",
+    content: `
+<h2>This Is For Us</h2>
+<p>Las Vegas Athletics Nation was built by fans for fans. Not for the front office. Not for the media relations department. Not for the ownership group. For the people who are going to fill the seats at the new stadium on the Strip in 2028, who are watching every pitch in Sacramento right now, and who are already counting down the days until the first pitch in Las Vegas.</p>
+
+<p>This site is our space. The place where we talk about the team honestly, celebrate what is worth celebrating, criticize what deserves criticism, and build the community that every new baseball city needs before it can claim to be a baseball city. Other sports media will cover the A's in Las Vegas with the institutional distance that institutional media requires. This site does not have that distance. We are fans. We care about the outcome. We want this to succeed.</p>
+
+<h2>What We Cover and How We Cover It</h2>
+<p>Las Vegas Athletics Nation covers everything about the Las Vegas A's from the perspective of fans who live here and care about what this means for our city. Stadium construction updates. Roster analysis. Farm system development. The community events and outreach programs that the team runs. The sports bar culture that is forming around the franchise. The history of baseball in Las Vegas that predates the A's and informs what the big leagues mean to a city that has been waiting for this.</p>
+
+<p>We cover it with the belief that Las Vegas deserves this team. That belief is not naive -- we understand the complicated history of the franchise's departure from Oakland, we respect the grief of Oakland fans, we are clear-eyed about the ownership situation. But we are not going to apologize for being excited about Major League Baseball coming to our city. The A's are here. That is a good thing. This community exists to make the most of it.</p>
+
+<h2>Respecting Where the Team Came From</h2>
+<p>The Oakland Athletics played 56 years in the East Bay. Four World Series championships. The Moneyball dynasty. Rickey Henderson. Reggie Jackson. Catfish Hunter. The history of the franchise in Oakland is genuine and profound, and it belongs to the Las Vegas franchise as much as it belongs to the city that was left behind.</p>
+
+<p>We will not erase Oakland from the story we tell here. We will honor the championships and the players and the decades of baseball that built this franchise into what it is. We will acknowledge that the move hurt real people in a real community and that their grief is legitimate. What we will not do is let that grief define our experience of the Las Vegas era. We inherited something remarkable. We plan to deserve it.</p>
+
+<h2>The Golden City and the Green and Gold</h2>
+<p>Las Vegas is already a sports city in ways that were unimaginable fifteen years ago. The Golden Knights. The Raiders. The Aces. The Las Vegas Lights. A city that had no major professional sports franchises in 2016 now has teams in four major leagues. The A's complete that picture and change the scale of what is possible.</p>
+
+<p>Baseball is different from the other sports because of the volume. One hundred sixty-two regular season games. Eighty-one home games. Six months of the schedule. Baseball becomes part of daily life in a way that hockey and football, with their compressed schedules, cannot. Las Vegas is about to have baseball become part of daily life, and Las Vegas Athletics Nation will be here for every day of it.</p>
+
+<h2>What You Can Do Here</h2>
+<p>Read the coverage. Share the articles. Argue with us about the roster. Tell us which bars in your neighborhood show the games. Send us your photos from Sacramento. Bring your kids to the community events. Get on the season ticket list. Show up in green and gold.</p>
+
+<p>This is the beginning of something. The stadium opens in 2028. Before then, there is work to do -- community to build, culture to establish, traditions to start. Las Vegas Athletics Nation is part of that work. We are here for all of it.</p>
+
+<p>Welcome. The A's are ours now.</p>
+${affiliateBlock}
+`,
+  },
+  {
+    slug: "oakland-to-vegas-open-letter-as-fans",
+    title: "Oakland to Vegas: An Open Letter to A's Fans Making the Journey With Us",
+    excerpt: "For the Oakland fans who are still here, still wearing green and gold, and choosing to believe in the Las Vegas future. This one is for you.",
+    date: "March 15, 2026",
+    category: "Community",
+    emoji: "✉️",
+    readingTime: "10 min read",
+    content: `
+<h2>To the Fans Who Stayed</h2>
+<p>This letter is for you. The Oakland fan who went to the Reverse Boycott and wore the "Sell the Team" shirt and cried when the final game ended and then, after some time, decided you were not done with the Athletics. The fan who followed the roster through Sacramento not because you forgave the ownership but because you could not stop loving the players and the game itself. The fan who looked at Las Vegas on the map and thought: maybe this is where the story continues.</p>
+
+<p>You did not betray Oakland by staying. Oakland was betrayed by ownership, not by fans. The love you have for this franchise is yours. You earned it through decades of showing up at the Coliseum when the team was good and when the team was terrible. You earned it by knowing the prospects and following the farm system and arguing about the bullpen. Nobody can take that from you. Not the move. Not John Fisher. Not the new city.</p>
+
+<h2>What Oakland Gave This Franchise</h2>
+<p>Everything good about the Las Vegas Athletics was built in Oakland. The Moneyball philosophy that changed how every team in baseball is constructed. The championship tradition -- three consecutive World Series titles from 1972 to 1974, the 1989 title over the Giants. The farm system culture that developed players who could compete against teams spending three times the payroll. The community of fans who showed up year after year and created one of the most knowledgeable, passionate, and wrongly overlooked fan bases in the sport.</p>
+
+<p>Las Vegas inherits all of that. We did not build it. Oakland built it. When we look at the green and gold and feel the weight of the history, that history is from the East Bay. We want to be clear about that because it matters. We are not erasing Oakland. We are carrying it forward to a new chapter that Oakland fans did not choose and many of them wanted no part of.</p>
+
+<h2>We Understand Why Some Left for Good</h2>
+<p>Many Oakland fans made the decision that the Las Vegas chapter was not their chapter. They returned the jerseys, canceled the subscriptions, refused to follow a franchise whose ownership had extracted value from their community for twenty years before finally leaving. That choice is understandable. It is more than understandable -- it is morally coherent. The people who left did not stop loving baseball. They stopped loving what this particular business did to their particular city.</p>
+
+<p>If you are reading this and you are still not sure whether to make the journey to Las Vegas with the franchise, nobody here is going to pressure you. The community we are building in Las Vegas will welcome you if you come. We will not resent you if you do not.</p>
+
+<h2>What the Move Means for Community</h2>
+<p>The fans who followed the franchise to Las Vegas from Oakland represent something important for the new community being built here. You bring history. You know what the green and gold means at a depth that a brand-new Las Vegas fan cannot access. The casual Las Vegas convert who becomes an A's fan because the stadium is three blocks from their hotel is a valuable member of this fan base. But the fan who was at the 1989 World Series and then followed the team to Las Vegas is carrying something irreplaceable.</p>
+
+<p>Both kinds of fans are welcome in this community. The Oakland history and the Las Vegas future are not competing narratives. They are the same story at different chapters. You can honor one without dismissing the other. This community intends to do exactly that.</p>
+
+<h2>The Future Is Being Built Right Now</h2>
+<p>The Las Vegas stadium rising on the Strip is being built partly for you. The 33,000 seats being designed with premium sight lines. The retractable roof keeping the desert heat out so baseball can be played the way it was meant to be played. The natural grass on a retractable field slab. All of it is the future that the franchise has been reaching toward for years.</p>
+
+<p>Oakland deserved a version of this future. Oakland deserved a stadium that was not shared with the Raiders, was not falling apart, did not have sight lines blocked by a football expansion. Oakland deserved John Fisher's investment in a waterfront development that would have been transformative for the city. Oakland did not get what it deserved. Las Vegas is getting what Oakland earned.</p>
+
+<p>The debt is real. The best way to honor it is to make the Las Vegas chapter something worth carrying the history into. Las Vegas Athletics Nation is committed to that. If you are making the journey with us, welcome. The seat is yours.</p>
+${affiliateBlock}
+`,
+  },
+  {
+    slug: "best-bars-vegas-to-watch-as-games",
+    title: "The Best Bars in Vegas to Watch A's Games",
+    excerpt: "Where the fan community is gathering in Las Vegas to watch A's games right now -- before the stadium opens, during the Sacramento era, and into the 2028 future.",
+    date: "March 15, 2026",
+    category: "Fan Scene",
+    emoji: "🍺",
+    readingTime: "11 min read",
+    content: `
+<h2>Building the Unofficial Fan Hubs</h2>
+<p>Every baseball fan base has its bars. The places that become, through the organic accumulation of regulars and rituals, the unofficial community centers of a sports fandom. Boston has its Fenway neighborhood pubs. Chicago has Wrigleyville. New York has any number of boroughs establishments that have been pouring drinks before Yankees or Mets games for generations.</p>
+
+<p>Las Vegas is building that culture now, in real time, during the Sacramento years, before the stadium opens. The bars where A's fans are gathering today are the bars that will be the "original" spots when the history of Las Vegas A's fandom is written decades from now. Here is where to find them.</p>
+
+<h2>Station Casinos Sports Books: The Backbone of Valley Baseball Watching</h2>
+<p>Station Casinos operates the best sports viewing infrastructure for Las Vegas residents outside of a stadium. Red Rock Casino, Green Valley Ranch, Sunset Station, and the other Station properties all feature race and sports books with large screen arrays, comfortable seating, and the operational commitment to showing every game that matters. For A's games, the Station properties are reliable first choices.</p>
+
+<p>Green Valley Ranch Resort in Henderson deserves particular attention. The Henderson market is home to a significant portion of the A's local fan base -- the suburban east valley residents who are building the everyday fan community that will sustain the franchise through its early Las Vegas years. Green Valley Ranch's sports book is one of the best in the valley for watching baseball, with screens sized and positioned for proper game viewing rather than the passive background entertainment that some sports books offer.</p>
+
+<p>If you want to make one Station property your regular A's watching spot, Green Valley Ranch is the recommendation. The atmosphere is right, the screen quality is excellent, and the surrounding food and beverage options give you choices before and after the game.</p>
+
+<h2>PT's Pub: The Neighborhood Standard</h2>
+<p>PT's Gold and PT's Pubs are Las Vegas originals. The chain has operated in the valley for decades and represents the local sports bar culture that predates the major league sports era. Multiple valley locations with consistent beer prices, reliable screen coverage, and a clientele that actually watches the game rather than treating it as ambient noise.</p>
+
+<p>The PT's on Flamingo in the central valley and the PT's on Sunset in Henderson both tend to draw baseball crowds when the A's are playing. These are not fancy establishments. They are exactly what you want from a neighborhood sports bar: cold beer, working televisions, and regulars who know the standings. The PT's culture is the backbone of local Las Vegas sports fandom and the A's community is building on top of it.</p>
+
+<h2>Beerhaus at The Park: The Pre-Game Future</h2>
+<p>Once the Las Vegas stadium opens on the Strip, the outdoor entertainment district known as The Park -- between New York-New York and the T-Mobile Arena -- will be the natural pre-game destination. Beerhaus at The Park is already a gathering spot for Knights and Raiders fans on game days, and the A's arrival will add another layer to that culture.</p>
+
+<p>Beerhaus is an outdoor bar with an extensive tap list, a solid food menu, and the kind of open-air Las Vegas evening energy that makes a drink before a game feel like the beginning of an event rather than just killing time. It is three minutes from the stadium site. When the A's open their first season on the Strip, Beerhaus will likely be the most prominent pre-game gathering point for fans who arrive early and want to absorb the atmosphere before entering the ballpark.</p>
+
+<h2>The Westgate Sports Book: For the Big Games</h2>
+<p>The Westgate SuperBook is the largest sports betting facility in the world by square footage and features a viewing wall that makes watching a game feel like watching it in a theater. For the games that matter most -- a playoff push series, a rivalry game against the Astros or Rangers, the first nationally televised Athletics game of the Las Vegas era -- the Westgate delivers an atmosphere that no neighborhood bar can match.</p>
+
+<p>The Strip pricing applies. A beer at the Westgate costs what a beer costs at an actual stadium. But for the games that deserve the full-scale experience, the investment is worth it. There is something genuinely different about watching a high-stakes baseball game on a screen that covers an entire wall of a 20,000-square-foot room.</p>
+
+<h2>Building Your Regular Spot</h2>
+<p>The best bar for A's games is the one where you become a regular. The bartender who knows what you drink. The stool that is yours on Tuesday night games. The group of strangers who became regulars at the same time you did and are now the people you text when something happens in the game.</p>
+
+<p>That culture is forming right now in Las Vegas. The bars where it forms will be the places people talk about when the A's win their first Las Vegas division title. Find your spot. Show up in green and gold. Let the bartender know you are going to be there for every home game. This is how a fan community actually gets built, one bar stool at a time.</p>
+${affiliateBlock}
+`,
+  },
+  {
+    slug: "las-vegas-as-tailgating-guide",
+    title: "Las Vegas A's Tailgating Guide: What We Know So Far",
+    excerpt: "The parking situation, the pregame culture, Vegas-style tailgating, and what to expect when the new stadium opens on the Strip in 2028.",
+    date: "March 15, 2026",
+    category: "Game Day",
+    emoji: "🚗",
+    readingTime: "10 min read",
+    content: `
+<h2>Tailgating in Las Vegas Is Going to Be Different</h2>
+<p>Traditional baseball tailgating involves a parking lot, a portable grill, a cooler of beer, and a few hours before the gates open. It is a democratic tradition. You pull up, you find your spot, you set up your folding chairs, and you conduct the pre-game ritual that is as much a part of the game day experience as anything that happens inside the stadium.</p>
+
+<p>The Las Vegas Athletics stadium at the former Tropicana site on the Strip is not going to have a traditional tailgating setup. The 9-acre stadium footprint does not include several thousand parking spaces surrounding it the way suburban stadiums do. The Strip location means you are not pulling a pickup truck into lot C and setting up your canopy next to fifty other families doing the same thing. Las Vegas tailgating for the A's is going to require adaptation and creativity, and that is actually fine because Las Vegas is very good at both things.</p>
+
+<h2>What the Parking Situation Actually Looks Like</h2>
+<p>The stadium authority and the team have been working on a transportation and parking plan since the site was selected. The confirmed elements so far: casino garage parking in properties adjacent to the stadium, remote lot options on the west side of I-15 with shuttle service, rideshare drop zones on the north and south sides of the stadium perimeter, and RTC bus service from suburban transit hubs in Henderson, Summerlin, and North Las Vegas.</p>
+
+<p>The casino garage option is the closest to traditional stadium parking in terms of the experience: you drive to a structure near the stadium, park, and walk. The difference is that you are parking in a multi-purpose garage that serves the casino, not a stadium-specific lot. Pricing will be dynamic and significantly higher than what fans in other markets pay for surface lot parking at baseball games. Plan for $30 to $50 for close garage parking at popular games, less at remote lots.</p>
+
+<p>The remote lot and shuttle option will be the right call for budget-conscious fans and for anyone who wants to avoid the Strip traffic entirely. Park at a designated lot, take the shuttle, arrive near the front gate without having fought through the intersection of Las Vegas Boulevard and Tropicana. The shuttle adds 15 to 20 minutes to your arrival time but removes the most stressful part of game day logistics.</p>
+
+<h2>The Strip Pre-Game: Vegas-Style Tailgating</h2>
+<p>Traditional tailgating involves bringing your own food and drink to the parking lot. Las Vegas pre-game culture is going to look more like the scene outside a Raiders game at Allegiant -- the hotels and bars and restaurants in the surrounding corridor become the tailgate zone. The Park entertainment district, the casino properties adjacent to the stadium, the outdoor spaces at Excalibur and New York-New York -- all of these will function as the fan gathering space that parking lot tailgating serves in other markets.</p>
+
+<p>This is not worse than traditional tailgating. It is different and it is in some ways better. Instead of food from your own cooler, you have access to the full Las Vegas food and beverage ecosystem. Instead of a parking lot in a suburban field, you are on the most entertainment-dense stretch of real estate in the world. The pre-game experience at a Las Vegas A's game is going to feel like a Las Vegas night out with a baseball game at the end of it, which is an elevated version of the tailgate experience rather than a diminished one.</p>
+
+<h2>What Traditional Tailgaters Should Know</h2>
+<p>If you are committed to the parking lot grill experience, there are options. Private lot operators will set up tailgate-friendly spaces near the stadium in the surrounding blocks. Expect to pay for the space, expect it to be more expensive than what you pay at a suburban park, and expect the logistics to require more advance planning than showing up and finding a spot.</p>
+
+<p>The Las Vegas Convention Center district, roughly half a mile from the stadium, has been discussed as a potential remote tailgate zone with shuttle service. This would provide a more traditional setup -- flat surface lots with space for grills and canopies -- for fans who want the classic experience and do not mind the shuttle ride.</p>
+
+<h2>The Tailgate Scene That Does Not Exist Yet</h2>
+<p>Here is the honest truth about Las Vegas A's tailgating in 2028: nobody knows exactly what it is going to look like because it has not happened yet. The culture that forms around the pregame experience at the new stadium will be determined by the fans who show up first and establish what works. If a group of regulars stakes out a section of casino property and turns it into the de facto A's pre-game spot, that spot becomes part of the culture. If the remote lot shuttle option works well and fans start treating it as a social event, that becomes a tradition.</p>
+
+<p>Las Vegas Athletics Nation will document all of it as it develops. The first season on the Strip in 2028 is going to be a discovery process for everyone. Come prepared to be flexible, come prepared to explore, and come prepared to help build something that does not exist yet. That is what a new sports city does.</p>
+${affiliateBlock}
+`,
+  },
+  {
+    slug: "rivalries-reborn-as-fit-al-west-from-las-vegas",
+    title: "Rivalries Reborn: How the A's Fit Into the AL West From Las Vegas",
+    excerpt: "The Astros, Angels, Mariners, and Rangers: how the AL West rivalry dynamics change when the A's are playing from Las Vegas, and what each matchup means for the fan community.",
+    date: "March 15, 2026",
+    category: "Rivalries",
+    emoji: "⚔️",
+    readingTime: "11 min read",
+    content: `
+<h2>The Division That Never Gets Easier</h2>
+<p>The American League West is the division Las Vegas inherited when the Athletics arrived. It is not a comfortable division to inhabit if you are a rebuilding franchise. The Houston Astros have won six division titles in the last eight years and appeared in three World Series. The Texas Rangers won the 2023 championship. The Seattle Mariners have playoff talent. The Los Angeles Angels have wasted a decade of Mike Trout's career but still carry the resources to be dangerous in the right moment.</p>
+
+<p>The A's fit into this division as the team that everybody should be able to beat and that periodically beats everybody anyway. That has been the Oakland role in the AL West for the last decade, and it is the Las Vegas role now. What changes with the relocation is the geography and the fan dynamics of each rivalry. Here is how each matchup looks from a Las Vegas community perspective.</p>
+
+<h2>Houston Astros: The Rivalry That Defines Everything</h2>
+<p>The Houston Astros are the AL West's dominant franchise. They are also the team that Las Vegas fans most need to beat to establish the Athletics as a legitimate competitor rather than a divisional doormat. The Astros' success has been built on player development, analytics, and an organizational depth that the A's have historically matched in philosophy if not in financial resources.</p>
+
+<p>The A's have beaten Houston in individual series regularly even during their rebuilding phases. The matchup when the A's rotation lines up favorably -- particularly when Mason Miller is available out of the bullpen to close games the starting pitching keeps competitive -- is not a foregone conclusion. Houston has vulnerabilities that the A's analytical approach is well-suited to exploit.</p>
+
+<p>For Las Vegas fans, the Astros series will be the series that matters most in terms of establishing the franchise's competitive identity. A split series against Houston in May is worth celebrating. A series win at the new Strip stadium in 2028 will be a moment that defines the early Las Vegas era.</p>
+
+<h2>Los Angeles Angels: The California Corridor Becomes Nevada</h2>
+<p>The Oakland-Angels rivalry was always a California affair -- two west coast cities separated by the Bay and the agricultural valleys between them. The Las Vegas-Angels matchup is now a Nevada-California border rivalry with genuinely different geography. Las Vegas fans heading to Anaheim for road games are making a four-hour drive through the Mojave rather than a two-hour drive down Interstate 580.</p>
+
+<p>The Angels have been the division's most disappointing franchise for the last decade, consistently unable to build a complete team around the generational talent of Mike Trout and, for several seasons, Shohei Ohtani. With both players gone or aging, the Angels are rebuilding with young arms and thin offense. For the A's in 2026, the Angels represent a favorable matchup -- a team at roughly the same organizational stage without the draft position advantages that the A's have accumulated.</p>
+
+<p>The Las Vegas-Anaheim series will draw California-based A's fans who make the drive. It will also draw Las Vegas fans who have historically identified with California sports teams and are now converting to local allegiance. The Angels series, more than any other, represents the competition for the identity of A's fans in Southern Nevada who grew up following California franchises.</p>
+
+<h2>Seattle Mariners: The Northwest vs. the Desert</h2>
+<p>Seattle and Oakland were always the two West Coast cities in the AL West most similar in character -- mid-sized, tech-influenced, baseball-serious in a way that Los Angeles's casual relationship with the Dodgers and Angels never quite matched. The Oakland-Seattle rivalry had a genuine Pacific Northwest vs. Bay Area quality that the Las Vegas version of this rivalry cannot replicate.</p>
+
+<p>What replaces it is the competition between two franchises with similar organizational philosophies. Both the A's and the Mariners are building through development rather than spending. Both have invested heavily in pitching development. Both are trying to compete with the Astros and Rangers without matching their payrolls. The head-to-head results between the two organizations will be one of the clearest measures of which development approach is working better.</p>
+
+<p>The Mariners have Julio Rodriguez as their franchise cornerstone. The A's have Jacob Wilson and Lawrence Butler developing into their Las Vegas cornerstones. Watching those players go head-to-head in a division series, starting in 2026 and developing toward the 2028 Vegas stadium era, is one of the more compelling subplot storylines in the AL West.</p>
+
+<h2>Texas Rangers: The Champion's Target on Their Back</h2>
+<p>The Texas Rangers won the 2023 World Series. They are a team that the A's and every other organization in the AL West is chasing. For Las Vegas fans, the Rangers represent something specific: the model of how a franchise that was rebuilding can arrive at a championship when the young core matures and the front office makes the right moves at the right time.</p>
+
+<p>The A's organizational comparison to the Rangers is imperfect -- Texas has more financial resources and a more established market. But the pathway from deliberate rebuilding through development to championship contention is the one the Athletics are trying to travel, and Texas is proof that the journey can be completed. When Las Vegas beats Texas, it is a statement about where the franchise is heading. When Texas beats Las Vegas easily, it is a reminder of how much work remains.</p>
+
+<h2>What Las Vegas Changes About All of These Rivalries</h2>
+<p>The geography of the AL West now includes Nevada. Road trips to Las Vegas for the Astros, Angels, Mariners, and Rangers mean something different than road trips to Oakland. Las Vegas as a destination adds a layer to every series that visiting fans and players will feel differently than they felt arriving at the Oakland Coliseum.</p>
+
+<p>Visiting teams will bring fans who are traveling to Las Vegas for the full experience -- the game is one piece of a weekend trip rather than the only reason to make the drive. The home atmosphere at the new Las Vegas stadium will be shaped by that tourist dynamic in ways that every other AL West park is not. These are the rivalries being built now, before the first pitch is thrown on the Strip. They will be defined by what happens on the field over the next decade.</p>
+${affiliateBlock}
+`,
+  },
+];
+
 export function getAllPosts(): Post[] {
   return posts;
 }
