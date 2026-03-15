@@ -953,6 +953,24 @@ export default function Home() {
               }}>{name}</a>
             ))}
           </div>
+
+          <div>
+            <div style={{ fontFamily: "'Space Mono', monospace", fontSize: '0.55rem', letterSpacing: '0.16em', textTransform: 'uppercase', color: C.gold, marginBottom: '1rem' }}>A&apos;s Coverage Network</div>
+            {[
+              ['TheLVAthletics.com', 'https://thelvathletics.com'],
+              ['TheLVAs.com', 'https://thelvas.com'],
+              ['TheVoiceOfCash.com', 'https://thevoiceofcash.com'],
+            ].map(([name, url]) => (
+              <a key={name} href={url} style={{
+                display: 'block',
+                fontFamily: "'Inter', sans-serif",
+                fontSize: '0.8rem',
+                color: 'rgba(245,240,232,0.4)',
+                marginBottom: '0.5rem',
+                textDecoration: 'none',
+              }}>{name}</a>
+            ))}
+          </div>
         </div>
 
         <div style={{

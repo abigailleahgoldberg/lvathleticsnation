@@ -18,6 +18,14 @@ const affiliateBlock = `
     <a href="https://www.fanatics.com/mlb/oakland-athletics/o-2793+t-53395338" target="_blank" rel="noopener" style="display:inline-block;padding:10px 20px;background:#003831;color:#FAFAF8;font-family:Arial,sans-serif;font-weight:bold;font-size:0.85rem;border-radius:4px;text-decoration:none;border:1px solid #EFB21E;">Shop Gear on Fanatics</a>
   </div>
 </div>
+
+<div style="background:#0D1F12;border:1px solid rgba(212,168,67,0.2);border-radius:8px;padding:24px;margin-top:20px;">
+  <div style="font-family:'Space Mono',monospace;font-size:0.55rem;letter-spacing:0.16em;text-transform:uppercase;color:#D4A843;margin-bottom:14px;">More From The A's Network</div>
+  <div style="display:flex;flex-direction:column;gap:10px;">
+    <a href="https://thelvathletics.com" style="font-size:0.9rem;color:#D4A843;text-decoration:none;font-family:Arial,sans-serif;"><strong>TheLVAthletics.com</strong> — Read the full roster analysis and deep dives on the Las Vegas A's</a>
+    <a href="https://thelvas.com" style="font-size:0.9rem;color:#D4A843;text-decoration:none;font-family:Arial,sans-serif;"><strong>TheLVAs.com</strong> — Breaking news and bold takes on Las Vegas Athletics baseball</a>
+  </div>
+</div>
 `;
 
 export const posts: Post[] = [
