@@ -110,13 +110,13 @@ export default function Home() {
               gap: '2rem',
               paddingRight: '2rem',
             }}>
-              <span>⚾ LV ATHLETICS NATION</span>
+              <span>LV ATHLETICS NATION</span>
               <span style={{ color: C.bone, opacity: 0.5 }}>|</span>
               <span>THE FAN COMMUNITY</span>
               <span style={{ color: C.bone, opacity: 0.5 }}>|</span>
               <span>OAKLAND ROOTS • VEGAS PRIDE</span>
               <span style={{ color: C.bone, opacity: 0.5 }}>|</span>
-              <span>🏟️ OPENING DAY 2028</span>
+              <span>OPENING DAY 2028</span>
               <span style={{ color: C.bone, opacity: 0.5 }}>|</span>
               <span>GREEN &amp; GOLD FOREVER</span>
               <span style={{ color: C.bone, opacity: 0.5 }}>|</span>
@@ -182,7 +182,7 @@ export default function Home() {
             color: C.dark,
             background: C.gold,
             padding: '0.45rem 1.2rem',
-          }}>🎟️ Tickets</a>
+          }}>Tickets</a>
         </div>
 
         <button className="mobile-toggle" onClick={() => setMobileNav(!mobileNav)} style={{
@@ -272,7 +272,7 @@ export default function Home() {
             marginBottom: '2.5rem',
             animation: 'slide-up 0.5s ease-out',
           }}>
-            <span style={{ fontSize: '1rem', animation: 'wave 2s ease-in-out infinite' }}>⚾</span>
+            <span style={{ width: '8px', height: '8px', borderRadius: '50%', background: 'currentColor', display: 'inline-block' }} />
             <span style={{
               fontFamily: "'Space Mono', monospace",
               fontSize: '0.62rem',
