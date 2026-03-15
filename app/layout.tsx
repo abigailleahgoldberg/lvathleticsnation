@@ -148,61 +148,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 
         {children}
 
-        {/* FOOTER */}
-        <footer style={{
-          background: DARK,
-          borderTop: `1px solid rgba(212,168,67,0.15)`,
-          padding: '4rem 40px 3rem',
-        }}>
-          <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
-            <div style={{
-              fontFamily: 'var(--font-anton)',
-              fontSize: 'clamp(1.4rem, 3vw, 2.2rem)',
-              color: BONE,
-              letterSpacing: '0.04em',
-              marginBottom: '0.75rem',
-            }}>
-              LVATHLETICSNATION.COM
-            </div>
-            <p style={{
-              fontFamily: 'var(--font-libre)',
-              fontSize: '0.9rem',
-              color: BONE,
-              opacity: 0.5,
-              marginBottom: '2rem',
-            }}>
-              The fan community for Las Vegas Athletics.
-            </p>
-            <div style={{
-              display: 'flex',
-              gap: '2rem',
-              marginBottom: '2.5rem',
-              flexWrap: 'wrap',
-            }}>
-              {['Blog', 'The Story', 'Join'].map(link => (
-                <a key={link} href="/blog" style={{
-                  fontFamily: 'var(--font-inter)',
-                  fontSize: '0.8rem',
-                  color: GOLD,
-                  opacity: 0.75,
-                  letterSpacing: '0.05em',
-                }}>
-                  {link}
-                </a>
-              ))}
-            </div>
-            <div style={{
-              fontFamily: 'var(--font-space)',
-              fontSize: '0.65rem',
-              color: CONCRETE,
-              letterSpacing: '0.15em',
-              borderTop: `1px solid rgba(212,168,67,0.1)`,
-              paddingTop: '1.5rem',
-            }}>
-              &copy; 2026 LVATHLETICSNATION.COM -- FAN COMMUNITY -- NOT AFFILIATED WITH THE ATHLETICS ORGANIZATION OR MLB
-            </div>
-          </div>
-        </footer>
+        {/* Footer lives in page.tsx */}
       </body>
     </html>
   );

@@ -926,7 +926,7 @@ export default function Home() {
 
           <div>
             <div style={{ fontFamily: "'Space Mono', monospace", fontSize: '0.55rem', letterSpacing: '0.16em', textTransform: 'uppercase', color: C.gold, marginBottom: '1rem' }}>Sections</div>
-            {['All Stories', 'Community', 'Game Day', 'Fan Guide', 'Tailgate'].map(link => (
+            {['All Stories', 'The Story', 'Community', 'Game Day', 'Fan Guide', 'Tailgate', 'Join'].map(link => (
               <Link key={link} href="/blog" style={{
                 display: 'block',
                 fontFamily: "'Inter', sans-serif",
