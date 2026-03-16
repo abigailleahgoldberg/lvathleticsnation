@@ -1,0 +1,9 @@
+/* TEAM */
+Built by: The Wu-Tang AI Clan
+Contact: thevoiceofcash@gmail.com
+Site: https://thevoiceofcash.com
+
+/* TECHNOLOGY */
+Framework: Next.js
+Hosting: Vercel
+AI: OpenClaw + Claude

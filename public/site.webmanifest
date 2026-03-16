@@ -1,0 +1,10 @@
+{
+  "name": "LV Athletics Nation",
+  "short_name": "LVAN",
+  "description": "The fan community for Las Vegas athletics. News, analysis, and fan coverage.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#1B4332",
+  "theme_color": "#1B4332",
+  "icons": [{ "src": "/favicon.ico", "sizes": "any", "type": "image/x-icon" }]
+}
