@@ -990,6 +990,14 @@ export default function Home() {
             <a href="https://www.espn.com/mlb/" target="_blank" rel="noopener noreferrer" style={{ fontFamily: "'Space Mono', monospace", color: 'rgba(245,240,232,0.25)', fontSize: '0.52rem', textDecoration: 'none' }}>ESPN MLB →</a>
             <a href="https://www.baseball-reference.com" target="_blank" rel="noopener noreferrer" style={{ fontFamily: "'Space Mono', monospace", color: 'rgba(245,240,232,0.25)', fontSize: '0.52rem', textDecoration: 'none' }}>Baseball Reference →</a>
           </div>
+          <div style={{ display: 'flex', gap: '16px', flexWrap: 'wrap', justifyContent: 'center', alignItems: 'center', marginTop: '10px', paddingTop: '10px', borderTop: '1px solid rgba(212,168,67,0.04)' }}>
+            <span style={{ fontFamily: "'Space Mono', monospace", fontSize: '0.52rem', fontWeight: 700, color: 'rgba(212,168,67,0.5)', letterSpacing: '0.15em', textTransform: 'uppercase' }}>Legal</span>
+            <Link href="/disclaimer" style={{ fontFamily: "'Space Mono', monospace", color: 'rgba(245,240,232,0.2)', fontSize: '0.52rem', textDecoration: 'none' }}>Disclaimer</Link>
+            <Link href="/privacy" style={{ fontFamily: "'Space Mono', monospace", color: 'rgba(245,240,232,0.2)', fontSize: '0.52rem', textDecoration: 'none' }}>Privacy Policy</Link>
+            <Link href="/terms" style={{ fontFamily: "'Space Mono', monospace", color: 'rgba(245,240,232,0.2)', fontSize: '0.52rem', textDecoration: 'none' }}>Terms</Link>
+            <Link href="/dmca" style={{ fontFamily: "'Space Mono', monospace", color: 'rgba(245,240,232,0.2)', fontSize: '0.52rem', textDecoration: 'none' }}>DMCA</Link>
+            <Link href="/contact" style={{ fontFamily: "'Space Mono', monospace", color: 'rgba(245,240,232,0.2)', fontSize: '0.52rem', textDecoration: 'none' }}>Contact</Link>
+          </div>
         </div>
       </footer>
     </>
