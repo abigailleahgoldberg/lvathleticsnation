@@ -250,7 +250,6 @@ Las Vegas, meet your ace. Mason Miller isn't just a bridge—he's the destinatio
 ${affiliateBlock}
 `,
   },
-];
 
   {
     slug: "welcome-to-lv-athletics-nation",
