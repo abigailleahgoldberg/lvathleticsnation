@@ -45,7 +45,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
   },
   alternates: {
-    canonical: '/',
+    canonical: 'https://lvathleticsnation.com',
   },
 };
 
@@ -58,6 +58,21 @@ const CONCRETE = '#6B7066';
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className={`${anton.variable} ${libreBaskerville.variable} ${inter.variable} ${spaceMono.variable}`}>
+      <head>
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          "name": "LV Athletics Nation",
+          "url": "https://lvathleticsnation.com",
+          "description": "The Las Vegas Athletics fan community. Oakland roots. Sacramento pit stop. Las Vegas destiny."
+        }) }} />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "WebSite",
+          "name": "LV Athletics Nation",
+          "url": "https://lvathleticsnation.com"
+        }) }} />
+      </head>
       <body>
         {/* NAV */}
         <nav style={{
