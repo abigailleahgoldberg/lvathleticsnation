@@ -988,6 +988,7 @@ export default function Home() {
             <span style={{ fontFamily: "'Space Mono', monospace", fontSize: '0.52rem', fontWeight: 700, color: 'rgba(212,168,67,0.6)', letterSpacing: '0.15em', textTransform: 'uppercase' }}>MLB Resources</span>
             <a href="https://www.mlb.com/athletics" target="_blank" rel="noopener noreferrer" style={{ fontFamily: "'Space Mono', monospace", color: 'rgba(245,240,232,0.25)', fontSize: '0.52rem', textDecoration: 'none' }}>MLB.com Athletics →</a>
             <a href="https://www.espn.com/mlb/" target="_blank" rel="noopener noreferrer" style={{ fontFamily: "'Space Mono', monospace", color: 'rgba(245,240,232,0.25)', fontSize: '0.52rem', textDecoration: 'none' }}>ESPN MLB →</a>
+            <a href="https://sabr.org" target="_blank" rel="noopener noreferrer" style={{ fontFamily: "'Space Mono', monospace", color: 'rgba(245,240,232,0.25)', fontSize: '0.52rem', textDecoration: 'none' }}>SABR — Baseball Research →</a>
             <a href="https://www.baseball-reference.com" target="_blank" rel="noopener noreferrer" style={{ fontFamily: "'Space Mono', monospace", color: 'rgba(245,240,232,0.25)', fontSize: '0.52rem', textDecoration: 'none' }}>Baseball Reference →</a>
           </div>
           <div style={{ display: 'flex', gap: '16px', flexWrap: 'wrap', justifyContent: 'center', alignItems: 'center', marginTop: '10px', paddingTop: '10px', borderTop: '1px solid rgba(212,168,67,0.04)' }}>
