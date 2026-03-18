@@ -35,8 +35,8 @@ export default function Home() {
         @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Barlow+Condensed:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap');
 
         *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-        html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; }
-        body { background: ${C.dark}; color: ${C.bone}; overflow-x: hidden; font-family: 'Inter', system-ui, sans-serif; }
+        html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; overflow-x: hidden; max-width: 100vw; }
+        body { background: ${C.dark}; color: ${C.bone}; overflow-x: hidden; max-width: 100vw; font-family: 'Inter', system-ui, sans-serif; }
         a { color: inherit; text-decoration: none; }
         ::selection { background: ${C.gold}; color: ${C.dark}; }
 
@@ -90,6 +90,7 @@ export default function Home() {
         top: 0,
         left: 0,
         right: 0,
+        width: '100%',
         zIndex: 1001,
       }}>
         <div style={{
@@ -135,7 +136,7 @@ export default function Home() {
         background: 'rgba(10,12,8,0.92)',
         backdropFilter: 'blur(12px)',
         borderBottom: '2px solid ' + C.gold,
-        padding: '0 3rem',
+        padding: '0 clamp(1rem, 4vw, 3rem)',
         height: '58px',
         display: 'flex',
         alignItems: 'center',
@@ -228,10 +229,12 @@ export default function Home() {
       <section className="pad" style={{
         minHeight: '100vh',
         paddingTop: '120px',
-        padding: '120px 3rem 4rem',
+        padding: '120px clamp(1rem, 5vw, 3rem) 4rem',
         background: `linear-gradient(170deg, ${C.green} 0%, ${C.dark} 65%)`,
         position: 'relative',
         overflow: 'hidden',
+        width: '100%',
+        boxSizing: 'border-box',
       }}>
         {/* Stars — Vegas night sky */}
         <div aria-hidden="true" style={{ position: 'absolute', inset: 0, overflow: 'hidden', pointerEvents: 'none' }}>
@@ -365,7 +368,7 @@ export default function Home() {
       {/* ============ SCOREBOARD STATS ============ */}
       <section className="pad" style={{
         background: C.dark,
-        padding: '0 3rem',
+        padding: '0 clamp(1rem, 4vw, 3rem)',
       }}>
         <div className="scoreboard-grid" style={{
           maxWidth: '1200px',
@@ -412,7 +415,7 @@ export default function Home() {
       {/* ============ FEATURED STORIES ============ */}
       <section className="pad" style={{
         background: C.dark,
-        padding: '6rem 3rem',
+        padding: '6rem clamp(1rem, 4vw, 3rem)',
       }}>
         <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
           <div style={{
@@ -545,7 +548,7 @@ export default function Home() {
       {/* ============ THE FAN VOICE — Editorial ============ */}
       <section className="pad" style={{
         background: C.gold,
-        padding: '6rem 3rem',
+        padding: '6rem clamp(1rem, 4vw, 3rem)',
         position: 'relative',
       }}>
         <div style={{ maxWidth: '800px', margin: '0 auto', textAlign: 'center' }}>
@@ -604,7 +607,7 @@ export default function Home() {
       {/* ============ MORE STORIES GRID ============ */}
       <section className="pad" style={{
         background: C.dark,
-        padding: '6rem 3rem',
+        padding: '6rem clamp(1rem, 4vw, 3rem)',
       }}>
         <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
           <div style={{
@@ -707,7 +710,7 @@ export default function Home() {
       {/* ============ TICKETS & GEAR ============ */}
       <section className="pad" style={{
         background: C.green,
-        padding: '5rem 3rem',
+        padding: '5rem clamp(1rem, 4vw, 3rem)',
         borderTop: '3px solid ' + C.gold,
         borderBottom: '3px solid ' + C.gold,
       }}>
@@ -770,7 +773,7 @@ export default function Home() {
       </section>
 
       {/* ============ SUBMIT YOUR TAKE ============ */}
-      <section className="pad" style={{ background: C.green, borderTop: `2px solid ${C.gold}`, borderBottom: `2px solid ${C.gold}`, padding: '5rem 3rem' }}>
+      <section className="pad" style={{ background: C.green, borderTop: `2px solid ${C.gold}`, borderBottom: `2px solid ${C.gold}`, padding: '5rem clamp(1rem, 4vw, 3rem)' }}>
         <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
           <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '4rem', alignItems: 'center' }} className="grid-2">
             <div>
@@ -832,7 +835,7 @@ export default function Home() {
       {/* ============ NEWSLETTER ============ */}
       <section className="pad" style={{
         background: C.dark,
-        padding: '5rem 3rem',
+        padding: '5rem clamp(1rem, 4vw, 3rem)',
       }}>
         <div style={{
           maxWidth: '650px',
@@ -913,7 +916,7 @@ export default function Home() {
       {/* ============ NETWORK LINKS ============ */}
       <section className="pad" style={{
         background: '#0C0E0A',
-        padding: '4rem 3rem',
+        padding: '4rem clamp(1rem, 4vw, 3rem)',
         borderTop: '1px solid rgba(255,215,0,0.08)',
       }}>
         <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
