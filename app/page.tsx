@@ -360,7 +360,7 @@ export default function Home() {
               border: '2px solid ' + C.gold,
               padding: '0.85rem 2rem',
               background: 'transparent',
-            }}>🎟️ Get Tickets</a>
+            }}>Get Tickets →</a>
           </div>
         </div>
       </section>
@@ -380,9 +380,9 @@ export default function Home() {
         }}>
           {[
             { num: '21', label: 'Fan Stories', icon: '📝' },
-            { num: '2028', label: 'Opening Day', icon: '🏟️' },
-            { num: '9', label: 'Championships', icon: '🏆' },
-            { num: '∞', label: 'Fan Loyalty', icon: '💚' },
+            { num: '2028', label: 'Opening Day', icon: 'STD' },
+            { num: '9', label: 'Championships', icon: 'CHP' },
+            { num: '∞', label: 'Fan Loyalty', icon: 'FAN' },
           ].map(({ num, label, icon }, i) => (
             <div key={label} style={{
               background: C.green,
@@ -741,7 +741,7 @@ export default function Home() {
             gap: '1.5rem',
           }}>
             {[
-              { name: 'StubHub Tickets', url: 'https://www.ticketsonsale.com/sports/athletics/?PCID=lvathletics-20', emoji: '🎟️', desc: 'Find seats for every home game' },
+              { name: 'StubHub Tickets', url: 'https://www.ticketsonsale.com/sports/athletics/?PCID=lvathletics-20', emoji: 'TKT', desc: 'Find seats for every home game' },
               { name: 'SeatGeek', url: 'https://www.seatgeek.com/athletics-tickets?aid=lvathletics-20', emoji: '🎫', desc: 'Best deals on A\'s tickets' },
               { name: 'Fanatics Gear', url: 'https://www.fanatics.com/mlb/oakland-athletics/o-2793+t-53395338?aff=lvathletics-20', emoji: '👕', desc: 'Jerseys, hats, and fan gear' },
             ].map(({ name, url, emoji, desc }) => (
@@ -787,10 +787,10 @@ export default function Home() {
               </p>
               <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
                 {[
-                  { icon: '⚾', label: 'Game recaps & hot takes' },
-                  { icon: '🏟️', label: 'Stadium build updates & opinions' },
-                  { icon: '🎰', label: 'Vegas fan experiences' },
-                  { icon: '💚', label: 'Oakland memories & legacy stories' },
+                  { icon: '•', label: 'Game recaps & hot takes' },
+                  { icon: 'STD', label: 'Stadium build updates & opinions' },
+                  { icon: '•', label: 'Vegas fan experiences' },
+                  { icon: 'FAN', label: 'Oakland memories & legacy stories' },
                 ].map(item => (
                   <div key={item.label} style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
                     <span style={{ fontSize: '1rem' }}>{item.icon}</span>
