@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { Anton, Libre_Baskerville, Inter, Space_Mono } from 'next/font/google';
 import './globals.css';
+import { NetworkBar } from '@/components/NetworkBar';
 
 const anton = Anton({
   weight: '400',
@@ -76,6 +77,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         }) }} />
       </head>
       <body>
+        <NetworkBar />
         {/* NAV */}
         <nav style={{
           background: G,
@@ -85,8 +87,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           justifyContent: 'space-between',
           height: '72px',
           position: 'sticky',
-          top: 0,
-          zIndex: 500,
+          top: '28px',
+          zIndex: 400,
           borderBottom: `2px solid ${BONE}`,
         }}>
           <a href="/" style={{ textDecoration: 'none' }}>

@@ -87,7 +87,7 @@ export default function Home() {
         overflow: 'hidden',
         padding: '0.5rem 0',
         position: 'fixed',
-        top: 0,
+        top: '28px',
         left: 0,
         right: 0,
         width: '100%',
@@ -129,7 +129,7 @@ export default function Home() {
       {/* ============ NAV ============ */}
       <nav style={{
         position: 'fixed',
-        top: '28px',
+        top: '56px',
         left: 0,
         right: 0,
         zIndex: 1000,
@@ -203,7 +203,7 @@ export default function Home() {
       {mobileNav && (
         <div style={{
           position: 'fixed',
-          top: '86px',
+          top: '114px',
           left: 0,
           right: 0,
           background: 'rgba(10,12,8,0.98)',
@@ -228,7 +228,7 @@ export default function Home() {
       {/* ============ HERO ============ */}
       <section className="pad" style={{
         minHeight: '100vh',
-        paddingTop: '120px',
+        paddingTop: '142px',
         padding: '120px clamp(1rem, 5vw, 3rem) 4rem',
         background: `linear-gradient(170deg, ${C.green} 0%, ${C.dark} 65%)`,
         position: 'relative',
