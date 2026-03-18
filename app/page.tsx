@@ -233,6 +233,35 @@ export default function Home() {
         position: 'relative',
         overflow: 'hidden',
       }}>
+        {/* Stars — Vegas night sky */}
+        <div aria-hidden="true" style={{ position: 'absolute', inset: 0, overflow: 'hidden', pointerEvents: 'none' }}>
+          {[...Array(50)].map((_, i) => (
+            <div key={i} style={{
+              position: 'absolute',
+              width: i % 8 === 0 ? '2px' : '1px',
+              height: i % 8 === 0 ? '2px' : '1px',
+              background: `rgba(255,215,0,${0.3 + (i % 4) * 0.15})`,
+              borderRadius: '50%',
+              left: `${(i * 19.3) % 100}%`,
+              top: `${(i * 11.7) % 60}%`,
+              animation: `pulse-live ${2 + (i % 3)}s ease-in-out infinite`,
+              animationDelay: `${(i * 0.25) % 2.5}s`,
+            }} />
+          ))}
+        </div>
+
+        {/* Baseball diamond SVG — right side hero decoration */}
+        <svg aria-hidden="true" style={{ position: 'absolute', top: '15%', right: '3%', width: '280px', height: '280px', opacity: 0.07, pointerEvents: 'none' }} viewBox="0 0 200 200">
+          <rect x="100" y="20" width="60" height="60" transform="rotate(45 100 100)" fill="none" stroke={C.gold} strokeWidth="3"/>
+          <circle cx="100" cy="100" r="4" fill={C.gold}/>
+          <circle cx="100" cy="30" r="6" fill={C.gold}/>
+          <circle cx="170" cy="100" r="6" fill={C.gold}/>
+          <circle cx="100" cy="170" r="6" fill={C.gold}/>
+          <circle cx="30" cy="100" r="6" fill={C.gold}/>
+          <path d="M100,100 L100,30 M100,100 L170,100 M100,100 L100,170 M100,100 L30,100" stroke={C.gold} strokeWidth="1" strokeDasharray="4,4"/>
+          <path d="M100,175 Q140,190 160,175 Q170,160 160,140" stroke={C.gold} strokeWidth="2" fill="none"/>
+        </svg>
+
         {/* Stadium silhouette */}
         <svg style={{ position: 'absolute', bottom: 0, left: 0, right: 0, width: '100%', height: '200px', opacity: 0.06 }} viewBox="0 0 1440 200" preserveAspectRatio="none">
           <path d="M0,200 L0,140 Q180,80 360,120 Q540,160 720,100 Q900,40 1080,90 Q1260,140 1440,80 L1440,200Z" fill={C.gold}/>
@@ -245,16 +274,6 @@ export default function Home() {
           right: '5%',
           width: '300px',
           height: '300px',
-          border: '2px solid rgba(255,215,0,0.06)',
-          transform: 'rotate(45deg)',
-          pointerEvents: 'none',
-        }} />
-        <div aria-hidden="true" style={{
-          position: 'absolute',
-          top: '15%',
-          right: '8%',
-          width: '200px',
-          height: '200px',
           border: '2px solid rgba(255,215,0,0.04)',
           transform: 'rotate(45deg)',
           pointerEvents: 'none',
@@ -746,6 +765,66 @@ export default function Home() {
                 }}>{desc}</div>
               </a>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ============ SUBMIT YOUR TAKE ============ */}
+      <section className="pad" style={{ background: C.green, borderTop: `2px solid ${C.gold}`, borderBottom: `2px solid ${C.gold}`, padding: '5rem 3rem' }}>
+        <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '4rem', alignItems: 'center' }} className="grid-2">
+            <div>
+              <div style={{ fontFamily: "'Space Mono', monospace", fontSize: '0.6rem', letterSpacing: '0.2em', color: C.gold, marginBottom: '1rem', textTransform: 'uppercase' }}>Fan Voices</div>
+              <h2 style={{ fontFamily: "'Oswald', sans-serif", fontSize: 'clamp(2rem, 4vw, 3.5rem)', fontWeight: 700, color: C.bone, lineHeight: 1.1, marginBottom: '1.5rem', textTransform: 'uppercase' }}>
+                Your Take<br />
+                <span style={{ color: C.gold }}>Belongs Here</span>
+              </h2>
+              <p style={{ fontSize: '1rem', color: 'rgba(245,240,232,0.65)', lineHeight: 1.8, marginBottom: '2rem', maxWidth: '420px' }}>
+                This is the Nation. Not a media company, not a PR arm — a community of fans who bleed green and gold. Submit your take. Tell your story. Call out the front office. We&apos;re all ears.
+              </p>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
+                {[
+                  { icon: '⚾', label: 'Game recaps & hot takes' },
+                  { icon: '🏟️', label: 'Stadium build updates & opinions' },
+                  { icon: '🎰', label: 'Vegas fan experiences' },
+                  { icon: '💚', label: 'Oakland memories & legacy stories' },
+                ].map(item => (
+                  <div key={item.label} style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
+                    <span style={{ fontSize: '1rem' }}>{item.icon}</span>
+                    <span style={{ fontFamily: "'Barlow Condensed', sans-serif", fontSize: '0.9rem', letterSpacing: '0.06em', color: 'rgba(245,240,232,0.75)', textTransform: 'uppercase', fontWeight: 600 }}>{item.label}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+            <div style={{ background: 'rgba(0,0,0,0.3)', border: `1px solid rgba(255,215,0,0.2)`, padding: '2.5rem' }}>
+              <div style={{ fontFamily: "'Oswald', sans-serif", fontSize: '1.1rem', fontWeight: 700, color: C.gold, letterSpacing: '0.08em', textTransform: 'uppercase', marginBottom: '1.5rem' }}>Submit Your Take</div>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
+                <input
+                  type="text"
+                  placeholder="Your name (or handle)"
+                  style={{ background: 'rgba(0,0,0,0.4)', border: '1px solid rgba(255,215,0,0.2)', padding: '0.75rem 1rem', color: C.bone, fontFamily: "'Inter', sans-serif", fontSize: '0.9rem', outline: 'none', width: '100%' }}
+                />
+                <input
+                  type="text"
+                  placeholder="Subject / Headline"
+                  style={{ background: 'rgba(0,0,0,0.4)', border: '1px solid rgba(255,215,0,0.2)', padding: '0.75rem 1rem', color: C.bone, fontFamily: "'Inter', sans-serif", fontSize: '0.9rem', outline: 'none', width: '100%' }}
+                />
+                <textarea
+                  placeholder="Your take. Be real. Be a fan."
+                  rows={5}
+                  style={{ background: 'rgba(0,0,0,0.4)', border: '1px solid rgba(255,215,0,0.2)', padding: '0.75rem 1rem', color: C.bone, fontFamily: "'Inter', sans-serif", fontSize: '0.9rem', outline: 'none', width: '100%', resize: 'vertical' }}
+                />
+                <a
+                  href="mailto:nation@lvathleticsnation.com?subject=Fan Take Submission"
+                  style={{ background: C.gold, color: C.dark, fontFamily: "'Oswald', sans-serif", fontSize: '1rem', fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase', padding: '1rem', textAlign: 'center', display: 'block', textDecoration: 'none', transition: 'opacity 0.2s' }}
+                >
+                  Submit Your Take →
+                </a>
+                <p style={{ fontFamily: "'Space Mono', monospace", fontSize: '0.5rem', letterSpacing: '0.12em', color: 'rgba(245,240,232,0.3)', textTransform: 'uppercase', textAlign: 'center' }}>
+                  Best takes featured on the site
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
