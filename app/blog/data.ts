@@ -30,6 +30,108 @@ const affiliateBlock = `
 
 export const posts: Post[] = [
   {
+    slug: "from-oakland-to-vegas-still-your-team",
+    title: "From Oakland to Vegas: Why They're Still My Team No Matter What",
+    excerpt: "The emotional journey of a lifelong A's fan through the move. Grief, anger, acceptance, cautious excitement. The identity question every Oakland fan has had to answer.",
+    date: "March 23, 2026",
+    category: "Community",
+    emoji: "💚",
+    readingTime: "7 min read",
+    content: `
+<h2>I Didn't Want to Follow Them</h2>
+<p>Let me be honest with you. When John Fisher finally made it official — when the vote happened and the "Las Vegas Athletics" stopped being a nightmare scenario and became just, reality — I wanted to be done. I wanted to be the kind of fan who draws a line in the sand and says: this is where it ends for me. The A's are the Oakland A's. I grew up in Oakland. My dad took me to the Coliseum. I know where section 108 smells like on a cold April night. I was not interested in rooting for a franchise owned by a man who bled the organization dry for two decades and then walked away with a billion-dollar stadium deal in his pocket.</p>
+
+<p>I told myself I was out.</p>
+
+<p>Then April happened. Then I found myself checking the box score anyway.</p>
+
+<h2>The Grief Was Real</h2>
+<p>I don't want to skip over this part because I think it matters. The grief that Oakland fans felt — and still feel — is legitimate. It is not melodrama. Baseball is not just a game when you've spent your whole life attached to a specific team in a specific city. The Oakland A's were part of the identity of the East Bay in a way that even the Warriors, for all their success, never quite matched. The Warriors won championships and got shiny arenas and became a global brand. The A's were always just ours. Rickety and underfunded and occasionally brilliant and always somehow still there.</p>
+
+<p>When that ended, something real ended. I know people who haven't watched a game since. I respect that. I understand it. The anger at Fisher is not going away, and it shouldn't. He deserves every bit of it.</p>
+
+<p>But I also know that somewhere along the way, maybe during Sacramento, maybe when I watched Jacob Wilson make a play that reminded me of every reason I love this sport — I stopped being able to stay away.</p>
+
+<h2>The Identity Question</h2>
+<p>Here's the thing nobody tells you about following a relocated team: the identity question is genuinely hard. Am I an Oakland A's fan who is grudgingly tagging along to Las Vegas? Am I a Las Vegas Athletics fan now? Am I something in between — a franchise fan rather than a city fan?</p>
+
+<p>I've landed somewhere uncomfortable and honest: I am an Athletics fan. Not an Oakland fan. Not yet a Las Vegas fan. An Athletics fan, which means I am attached to the players and the history and the green and gold and the particular organizational stubbornness that has always defined this franchise. That stubbornness — the Moneyball years, the rotation of mid-market magic, the ability to develop players that bigger organizations somehow miss — that is not something John Fisher can take away. It belongs to the game.</p>
+
+<p>Mason Miller closing out a game in Sacramento with that slider — that is the same feeling I had watching Dennis Eckersley in my childhood. It is the same franchise. Different city. Same soul.</p>
+
+<h2>What Las Vegas Means to Me Now</h2>
+<p>I visited Las Vegas last fall. Drove by the stadium site on Tropicana. Stood there looking at the construction and tried to figure out what I felt.</p>
+
+<p>What I felt was complicated. There was something that looked like excitement fighting with something that felt like guilt. The stadium is going to be beautiful. The location is absurd in the best possible Las Vegas way — a jewel-box ballpark at the edge of the Strip, with the neon skyline visible from the upper deck. It is going to be unlike any baseball experience in America. That is real, and I am allowed to feel something about it even while holding onto the grief about Oakland.</p>
+
+<p>The Oakland A's played their last game in a stadium that should have been replaced twenty years earlier, in a city that deserved better ownership, in a market that loved them harder than they were ever loved back. Las Vegas is getting something Oakland earned. That is a complicated truth and I'm not going to pretend it isn't.</p>
+
+<p>But I'm going to be there when they open that stadium. In green and gold. Angry at Fisher and excited about Wilson and trying to reconcile all of it in real time, the way actual fans do.</p>
+
+<h2>You're Still Allowed to Feel All of It</h2>
+<p>If you're reading this and you're somewhere in the same gray area — still following the team, still angry about Oakland, not sure what you are now — I want you to know that is a valid place to be. You don't have to resolve it cleanly. You don't have to pick a lane. You are allowed to love the players and hate the circumstances. You are allowed to be excited about Las Vegas and still grieve Oakland.</p>
+
+<p>The A's are still my team. Not because I forgave anyone. Because the game got me again. It always does.</p>
+
+<p>See you at the ballpark. Eventually. Whenever that actually happens.</p>
+\${affiliateBlock}
+\`,
+  },
+  {
+    slug: "las-vegas-athletics-fan-predictions-2026-season",
+    title: "Las Vegas Athletics Fan Predictions for the 2026 Season (Hot Takes Welcome)",
+    excerpt: "Win totals, breakout players, biggest question marks, and the moment of the year. Community predictions for the Las Vegas Athletics 2026 season. Drop yours in the comments.",
+    date: "March 23, 2026",
+    category: "Community",
+    emoji: "🔥",
+    readingTime: "6 min read",
+    content: `
+<h2>It's Prediction Season and We're Here for It</h2>
+<p>Spring Training is either over or almost over depending on when you're reading this, and you know what that means: it is absolutely time to make predictions that will either age beautifully or haunt us through September. This is the fun part. This is the part where the record is still 0-0 and everything feels possible and you can argue with strangers on the internet about whether your guy is about to break out without any evidence either way.</p>
+
+<p>Here are my 2026 predictions for the Las Vegas Athletics. I'm inviting all of you to drop yours in the comments because the whole point of a fan community is that we're doing this together. Let's get into it.</p>
+
+<h2>Win Total Prediction: 78-84</h2>
+<p>I know. I know. That's not exciting. But I think that's where this team actually lands in 2026, and I'd rather be honest about it than pretend we're sneaking into the wild card hunt. The roster is young and the development is real, but the AL West is brutal. Houston is going to win the division again. Texas and Seattle are both better than us right now. We are still a year or two away from the core being ready to compete at that level.</p>
+
+<p>The optimistic case for 84 wins is if Mason Miller stays healthy all year, Jacob Wilson takes the next developmental step, and the rotation holds together longer than anyone expects. The pessimistic case for 78 is if the bullpen falls apart and we're watching guys get stretched in roles they're not ready for by June.</p>
+
+<p>78-84. I'm locking it in. Come at me.</p>
+
+<h2>Breakout Player Prediction: Lawrence Butler</h2>
+<p>This is my most confident prediction. Lawrence Butler has the tools that front offices get giddy about — the athleticism, the bat speed, the arm. Last year felt like he was figuring out what he was. This year feels like the year he stops figuring it out and starts just doing it.</p>
+
+<p>I think he hits .275 with 20+ home runs and makes some noise in the AL outfielder conversation by the All-Star break. I think he's going to be the guy new Las Vegas fans point to as "their guy" — the one they discovered before the rest of the country caught on. If you're not watching Lawrence Butler closely this year, that's on you.</p>
+
+<h2>Biggest Question Mark: The Rotation After Miller</h2>
+<p>This is where I get nervous. We all know what we have at the back end with Mason Miller. That is settled. What is not settled is what the starting rotation looks like for games 2 through 5 on any given series. The A's have been stockpiling arms and the talent is there, but can they stay healthy? Can one of the young starters emerge as a genuine number two?</p>
+
+<p>If someone in that rotation steps up and gives us 32 starts, 180 innings, and a 3.80 ERA or better, this team competes. If we're cycling guys in and out of the rotation by July, we're watching development games in August while waiting for 2027 to matter.</p>
+
+<p>I'm cautiously optimistic. One guy is going to surprise us. I just don't know which one yet.</p>
+
+<h2>The Moment of the Year</h2>
+<p>My prediction for the single moment that defines the 2026 Las Vegas Athletics season: a walk-off win against Houston at Sutter Health Park in Sacramento, late July, in a game that keeps us in wild card contention for at least one more week. Miller on the mound in the ninth, striking out the side, the Sacramento crowd going absolutely insane.</p>
+
+<p>Why this? Because I think this team is going to give us a moment. They always do. Even in the lean years, there's always a stretch where you remember why you signed up for this. And Houston, specifically Houston, is the team that this franchise needs to beat to prove it's building toward something real.</p>
+
+<p>That's my moment. What's yours?</p>
+
+<h2>Hot Take Corner: Jacob Wilson Makes an All-Star Case</h2>
+<p>This is the pure hot take section where I go on record saying something that will either make me look brilliant or ridiculous. Here it is: Jacob Wilson is going to make a legitimate All-Star case in 2026. He's not going to get selected because he's a young player on a small-market team that's not in contention, but the numbers are going to be there and the baseball world is going to start paying attention.</p>
+
+<p>He's got that controlled aggression at the plate that reminds me of players who just make contact and find holes and refuse to go away. By August, someone is going to write the article about why he should have been on the All-Star team. I'm saying it now.</p>
+
+<h2>Drop Your Predictions</h2>
+<p>Okay — your turn. What's your win total prediction? Who's your breakout player? What's the moment of the year? What's your hot take that you're willing to put on record right now before the season starts?</p>
+
+<p>This is what the community is for. We're all going to be wrong about something. We're all going to be right about something. Let's have the argument now so we can look back at it in October and settle up.</p>
+
+<p>Drop it in the comments. Let's go 2026. Green and gold.</p>
+\${affiliateBlock}
+\`,
+  },
+  {
       slug: "las-vegas-as-spring-training-2027-guide",
     title: "Complete Guide to Las Vegas A's Spring Training 2027",
     excerpt: "Everything Vegas fans need to know about the Athletics' 2027 Spring Training: facility locations, tickets, travel, and autograph tips.",
