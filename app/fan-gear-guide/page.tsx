@@ -9,7 +9,7 @@ export default function FanGearPage() {
   return (
     <div style={{minHeight:"100vh",background:"#0a0a0a",color:"#F0F0F0",fontFamily:"system-ui,sans-serif"}}>
       <nav style={{padding:"16px 5vw",borderBottom:"1px solid #1a1a1a",display:"flex",justifyContent:"space-between",alignItems:"center"}}>
-        <Link href="/" style={{fontWeight:900,fontSize:20,color:"#F0F0F0",textDecoration:"none"}}>⚾ LV Athletics Nation</Link>
+        <Link href="/" style={{fontWeight:900,fontSize:20,color:"#F0F0F0",textDecoration:"none"}}> LV Athletics Nation</Link>
         <Link href="/blog" style={{color:"rgba(255,255,255,0.5)",textDecoration:"none",fontSize:14}}>← Back</Link>
       </nav>
       <div style={{maxWidth:800,margin:"0 auto",padding:"60px 5vw"}}>
