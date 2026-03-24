@@ -61,7 +61,6 @@ When the Dodgers come to Allegiant, it is not just a series. Show up early. Wear
     category: 'History',
     readTime: 6
   },
-] = [
   {
     slug: "from-oakland-to-vegas-still-your-team",
     title: "From Oakland to Vegas: Why They're Still My Team No Matter What",
