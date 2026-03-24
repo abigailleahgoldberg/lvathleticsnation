@@ -42,7 +42,6 @@ For food: the area around the stadium has expanded significantly since the stadi
 The crowd mix at A's games in Vegas is still forming its identity. You will see green and gold from Oakland next to Las Vegas-specific A's gear. You will hear debates about whether the franchise made the right move. You will also see families with kids who grew up here and have no Oakland context, just a local team to root for. Watch how those communities blend over the next five years. It is genuinely interesting.`,
     date: '2026-03-24',
     category: 'Fan Culture',
-    readTime: 6
   },
   {
     slug: 'athletics-vs-dodgers-los-angeles-rivalry-explained',
@@ -59,7 +58,6 @@ Now the A's are in Vegas and the Dodgers are the defending World Series champion
 When the Dodgers come to Allegiant, it is not just a series. Show up early. Wear your green and gold.`,
     date: '2026-03-24',
     category: 'History',
-    readTime: 6
   },
   {
     slug: "from-oakland-to-vegas-still-your-team",
