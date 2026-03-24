@@ -197,7 +197,7 @@ export default function Home() {
           cursor: 'pointer',
           alignItems: 'center',
           justifyContent: 'center',
-        }}>{mobileNav ? '✕' : '☰'}</button>
+        }}>{mobileNav ? '' : ''}</button>
       </nav>
 
       {mobileNav && (
@@ -379,7 +379,7 @@ export default function Home() {
           zIndex: 10,
         }}>
           {[
-            { num: '21', label: 'Fan Stories', icon: '📝' },
+            { num: '21', label: 'Fan Stories', icon: '' },
             { num: '2028', label: 'Opening Day', icon: 'STD' },
             { num: '9', label: 'Championships', icon: 'CHP' },
             { num: '∞', label: 'Fan Loyalty', icon: 'FAN' },
@@ -597,7 +597,7 @@ export default function Home() {
                 alignItems: 'center',
                 gap: '0.4rem',
               }}>
-                <span style={{ color: C.green }}>✓</span> {tag}
+                <span style={{ color: C.green }}></span> {tag}
               </div>
             ))}
           </div>
@@ -742,8 +742,8 @@ export default function Home() {
           }}>
             {[
               { name: 'StubHub Tickets', url: 'https://www.ticketsonsale.com/sports/athletics/?PCID=lvathletics-20', emoji: 'TKT', desc: 'Find seats for every home game' },
-              { name: 'SeatGeek', url: 'https://www.seatgeek.com/athletics-tickets?aid=lvathletics-20', emoji: '🎫', desc: 'Best deals on A\'s tickets' },
-              { name: 'Fanatics Gear', url: 'https://www.fanatics.com/mlb/oakland-athletics/o-2793+t-53395338?aff=lvathletics-20', emoji: '👕', desc: 'Jerseys, hats, and fan gear' },
+              { name: 'SeatGeek', url: 'https://www.seatgeek.com/athletics-tickets?aid=lvathletics-20', emoji: '', desc: 'Best deals on A\'s tickets' },
+              { name: 'Fanatics Gear', url: 'https://www.fanatics.com/mlb/oakland-athletics/o-2793+t-53395338?aff=lvathletics-20', emoji: '', desc: 'Jerseys, hats, and fan gear' },
             ].map(({ name, url, emoji, desc }) => (
               <a key={name} href={url} target="_blank" rel="noopener" className="hover-lift" style={{
                 background: 'rgba(0,0,0,0.3)',
@@ -842,7 +842,7 @@ export default function Home() {
           margin: '0 auto',
           textAlign: 'center',
         }}>
-          <div style={{ fontSize: '2.5rem', marginBottom: '1rem' }}>📬</div>
+          <div style={{ fontSize: '2.5rem', marginBottom: '1rem' }}></div>
           <h2 style={{
             fontFamily: "'Oswald', sans-serif",
             fontSize: '2rem',
@@ -908,7 +908,7 @@ export default function Home() {
               letterSpacing: '0.08em',
               textTransform: 'uppercase',
               cursor: 'pointer',
-            }}>{subscribed ? '✅' : subscribing ? '...' : 'Join'}</button>
+            }}>{subscribed ? '' : subscribing ? '...' : 'Join'}</button>
           </form>
         </div>
       </section>
