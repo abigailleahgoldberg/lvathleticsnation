@@ -28,7 +28,40 @@ const affiliateBlock = `
 </div>
 `;
 
-export const posts: Post[] = [
+export const posts: Post[
+  {
+    slug: 'las-vegas-athletics-tailgate-guide-2026',
+    title: 'The Official Unofficial Las Vegas Athletics Tailgate Guide',
+    excerpt: 'Where to go before the game, what to bring, and how to do a proper Vegas sports pregame.',
+    content: `Tailgating in Las Vegas hits differently than anywhere else. The weather is usually perfect, there is more food within half a mile of any stadium than most cities have in their entire downtown, and the people who show up for a Vegas A's tailgate are a mix of lifelong Oakland fans who followed the team and new Vegas fans who found something to root for. Both groups are welcome. Both groups eat.
+
+The Allegiant Stadium complex has designated tailgate areas that open three hours before first pitch. Bring a grill or find the setup that works for you. Parking in the stadium lots runs $25-40 for premium spots — factor that into your budget. The alternative is to pregame in one of the nearby bar areas and walk or rideshare to the gate.
+
+For food: the area around the stadium has expanded significantly since the stadium opened. There are options from casino food halls to local Vegas joints within rideshare distance. The tailgate traditionalists who want a parking lot grill are well served by the stadium facilities.
+
+The crowd mix at A's games in Vegas is still forming its identity. You will see green and gold from Oakland next to Las Vegas-specific A's gear. You will hear debates about whether the franchise made the right move. You will also see families with kids who grew up here and have no Oakland context, just a local team to root for. Watch how those communities blend over the next five years. It is genuinely interesting.`,
+    date: '2026-03-24',
+    category: 'Fan Culture',
+    readTime: 6
+  },
+  {
+    slug: 'athletics-vs-dodgers-los-angeles-rivalry-explained',
+    title: 'The A\'s vs. Dodgers Rivalry Explained for New Vegas Fans',
+    excerpt: 'Why games against LA carry extra weight and what the history is behind this West Coast matchup.',
+    content: `If you are a new Las Vegas Athletics fan who does not have context for the Oakland-Los Angeles dynamic, here is what you need to know before the first Dodgers series.
+
+The Oakland A's and the Los Angeles Dodgers shared California as franchises for over 50 years. They rarely played — they were in different leagues before interleague play — but they existed in a quiet competition for West Coast baseball supremacy. The Giants and the A's had the NorCal identity. The Dodgers had SoCal. The Bay Area and Los Angeles relationship carries cultural weight that goes well beyond baseball.
+
+The Dodgers are the most valuable franchise in baseball and have operated with a payroll that smaller market teams cannot match. The A's, for most of their history in Oakland, operated as a mid-to-low payroll team that competed through player development and front office innovation — the Moneyball era is the most famous expression of this. The David versus Goliath narrative was built into the matchup.
+
+Now the A's are in Vegas and the Dodgers are the defending World Series champions and perennial powerhouses. The games mean something. They mean something because of history and they mean something because of geography — Las Vegas pulls visitors from Southern California who grew up Dodgers fans, and the A's are trying to build a fanbase in a city where those people live.
+
+When the Dodgers come to Allegiant, it is not just a series. Show up early. Wear your green and gold.`,
+    date: '2026-03-24',
+    category: 'History',
+    readTime: 6
+  },
+] = [
   {
     slug: "from-oakland-to-vegas-still-your-team",
     title: "From Oakland to Vegas: Why They're Still My Team No Matter What",
