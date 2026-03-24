@@ -28,7 +28,7 @@ const affiliateBlock = `
 </div>
 `;
 
-export const posts: Post[
+export const posts: Post[] = [
   {
     slug: 'las-vegas-athletics-tailgate-guide-2026',
     title: 'The Official Unofficial Las Vegas Athletics Tailgate Guide',
