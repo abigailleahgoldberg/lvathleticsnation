@@ -40,10 +40,11 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     siteName: 'LV Athletics Nation',
-    images: [{ url: '/og-image.png' }],
+    images: [{ url: '/opengraph-image', width: 1200, height: 630 }],
   },
   twitter: {
     card: 'summary_large_image',
+    images: ['/opengraph-image'],
   },
   alternates: {
     canonical: 'https://lvathleticsnation.com',
