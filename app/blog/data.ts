@@ -596,3 +596,228 @@ export function getAllPosts(): Post[] {
 export function getPostBySlug(slug: string): Post | undefined {
   return posts.find((p) => p.slug === slug);
 }
+
+const aprilPosts2026: Post[] = [
+  {
+    slug: 'from-oakland-to-vegas-fan-migration-story',
+    title: `From Oakland to Vegas: The Fan Migration Story Nobody Told Right`,
+    excerpt: `The A's move from Oakland to Las Vegas wasn't just a business decision — it was a migration of community, identity, and heartbreak. Here's the story the headlines got wrong.`,
+    date: '2026-04-01',
+    category: `Las Vegas Athletics`,
+    readingTime: '5 min read',
+    emoji: '⚾',
+    content: `The narrative about the Oakland Athletics relocation was set early and it was simple: greedy ownership abandons loyal fans. Corporate sports eats community. Las Vegas gets a team it didn't deserve. Oakland gets robbed.
+
+That narrative isn't wrong, exactly. But it's incomplete. And the part it leaves out is the actual human story of what happens when a fan base splits — when one community is left behind and another is asked to adopt something with complicated provenance.
+
+## What Oakland Lost
+
+Start here, because it deserves honest acknowledgment: Oakland A's fans got a raw deal.
+
+The Coliseum was not a great venue in its later years. But it was *their* venue, in a way that goes beyond bricks and plumbing. The specific smell of the Coliseum on a summer night, the specific crowd that came to games — the working-class East Bay baseball crowd that showed up even when the team was terrible, that created the "Oakland Coliseum" experience that was unlike anything else in baseball — that was real and specific and valuable, and it's gone.
+
+The fan base that sustained the A's through losing decades and budget constraints and revolving rosters and broken promises about a new stadium — they deserved better. The ownership situation in Oakland was complicated, the stadium situation was genuinely broken, and the city government bears some responsibility for the outcome. But the fans? They did everything right. They showed up. They didn't deserve this.
+
+That loss is real and it should be named.
+
+## The Complicated Middle: The Fans Who Traveled
+
+Something happened that the relocation narrative didn't fully predict: a lot of Oakland A's fans followed the team.
+
+Not all of them — not even most of them. But a meaningful subset of the most passionate, most committed A's fans made the decision, implicitly or explicitly, that their connection was to the green and gold, not to the geography. They were A's fans before they were Oakland fans, in the specific sense that the team was the anchor of the identity.
+
+Some of them moved to Las Vegas — the city has been a growing destination for Californians for years, and some portion of Bay Area baseball fans were already making or planning that migration. Some of them became traveling fans, making the road trip to Las Vegas for series and treating the games as a destination.
+
+Some of them turned away entirely. For these fans, the Oakland identity was inseparable from the team identity. Without the Oakland, there was no A's. This is a legitimate and understandable position.
+
+All three groups are real. The coverage tended to treat Oakland fans as a monolith, as if every person who had ever attended a game at the Coliseum was equally devastated and equally opposed. The reality is more complicated.
+
+## What Las Vegas Inherited
+
+Las Vegas inherited a team with a specific culture — one that has always been slightly contrarian, slightly outsider, the team that finds value where others don't look, that builds systems rather than accumulates stars, that has punched above its financial weight through intellectual and analytical advantages.
+
+That's an interesting identity for a Las Vegas franchise. The city has always prized the edge, the angle, the person who figured out the system. There's something genuinely fitting about the Athletics — the organization that invented moneyball, that built dynasties on a small-market budget, that always had to be smarter than the competition — landing in the city built by people who understood that beating the house requires knowing things others don't.
+
+The Las Vegas version of the Athletics doesn't need to apologize for being Las Vegas. It's not Oakland. It shouldn't try to be. But there's an authentic connective tissue between the franchise's identity and this city's identity if you look for it.
+
+## The New Fan
+
+The third character in this story is the Las Vegas fan who came to baseball through the A's arrival. Someone who grew up in Nevada without a major league team to attach to, who watched baseball loosely as a tourist sport rather than a community one, who is now a season ticket holder and learning the deep culture of a franchise they've owned for one year.
+
+These fans get mocked sometimes — "you don't deserve the A's," "you don't know what you have" — by people for whom baseball fandom is defined by decades of personal investment.
+
+But every fan community started somewhere. Everyone was a first-year fan once. The Golden Knights fan base in 2017 was full of people who barely knew the rules of hockey — and eight years later, that community is real and knowledgeable and passionate because they were allowed to enter without gatekeeping.
+
+Las Vegas baseball fans deserve the same courtesy.
+
+## The Honest State of the Fan Migration
+
+In 2026, the fan community around the Las Vegas Athletics is genuinely mixed — people from all three groups described above, navigating a shared space with different histories and different relationships to this team.
+
+The former Oakland fan sitting next to the lifelong Las Vegas resident sitting next to the first-time baseball attendee — that's the specific composition of the Las Vegas A's fan base right now. It's not settled. It's not clean. It's a community in formation.
+
+The best possible outcome for this franchise is that these three groups find the shared language — the green and gold, the specific joy of A's baseball, the scrappy underdog identity — and build something genuinely new together.
+
+The worst outcome is that the divisions harden, that nobody feels quite at home, and that the team plays in front of half-empty stadiums watched by people who feel vaguely guilty about being there.
+
+The outcome depends partly on what the organization does. Partly on what the city does. And partly on what the fans do — including which story they decide to tell themselves about where this all came from and where it's going.
+
+---
+
+*Join the Las Vegas Athletics fan community at [LV Athletics Nation](/community).*`,
+  },
+  {
+    slug: 'how-to-watch-las-vegas-athletics-games-2026',
+    title: `How to Watch Las Vegas Athletics Games in 2026: Every Streaming and Broadcast Option`,
+    excerpt: `Where to watch Las Vegas Athletics games in 2026 — every local broadcast, streaming option, and out-of-market solution so you don't miss a pitch.`,
+    date: '2026-04-01',
+    category: `Las Vegas Athletics`,
+    readingTime: '4 min read',
+    emoji: '⚾',
+    content: `Baseball is a 162-game season. You're going to need multiple ways to watch.
+
+Whether you're a Las Vegas resident, a fan somewhere else in the country, an Oakland expat trying to follow the team in its new home, or someone just getting into the A's for the first time — here is every way to watch Las Vegas Athletics games in 2026.
+
+## Local Broadcast: Las Vegas Market
+
+Athletics games in the Las Vegas market are available on the team's regional sports network. As of the 2025-26 season, the Athletics' local television deal determines which channel carries home and away games in the Vegas DMA.
+
+**Check your local cable/satellite provider** for the current RSN (regional sports network) channel number in the Las Vegas area. RSNs operate under various brand names in different markets — the specific channel will depend on your provider.
+
+**Over-the-air broadcasts:** Select games throughout the season are broadcast on major network affiliates (MLB on Fox, ESPN Sunday Night Baseball, Apple TV+ Friday Night Baseball). These games are available without cable or streaming subscriptions.
+
+**Nevada-specific note:** If you're in the Las Vegas metro and subscribed to a major cable or satellite provider, the Athletics' regional broadcast should be part of your standard package. Contact your provider to confirm.
+
+## National Broadcast Schedule
+
+Several national broadcast windows carry regular season games:
+- **ESPN Sunday Night Baseball** — one nationally televised game per week, rotating between teams. The Athletics will appear multiple times if they're competitive.
+- **MLB on Fox / FS1** — Saturday and Sunday afternoon broadcasts throughout the season.
+- **Apple TV+ Friday Night Baseball** — two games per Friday night, available free on Apple TV+ (no subscription required for these specifically designated games).
+- **Peacock** — carries select Sunday morning games.
+
+These national windows are the easiest way to catch the Athletics for fans outside the Las Vegas market without a streaming subscription.
+
+## MLB.TV: The Out-of-Market Solution
+
+**MLB.TV** is the official out-of-market streaming solution and the best option for fans who want to watch every game.
+
+**How it works:** MLB.TV gives you access to all out-of-market games. The catch: blackout restrictions apply to local market games. If you're in Las Vegas, you're blacked out of the Athletics' regional broadcast on MLB.TV (you need the local broadcast for those). If you're outside the Las Vegas market, you can watch all Athletics games.
+
+**Pricing (2026):** MLB.TV typically runs $130-150/year for a full-season subscription, or $25-30/month. A single-team subscription is available at a lower price if you only want to follow the Athletics.
+
+**Streaming on:** Apple TV, Roku, Amazon Fire TV, Android TV, smart TVs, iOS, Android, web browsers. Cross-platform support is comprehensive.
+
+**Quality:** 1080p HD streams are standard. Multiple camera angles and the option to disable local commentary (replace with away team broadcast) are features power users appreciate.
+
+## Apple TV+: The Growing MLB Partner
+
+Apple and MLB have an expanding partnership that goes beyond Friday Night Baseball. The Apple TV+ app is becoming an increasingly important part of accessing baseball, with additional game windows likely to be announced or expanded during the 2026 season.
+
+**Current Apple TV+ MLB content:**
+- Friday Night Baseball (two games per Friday, free with ad-supported Apple TV account)
+- MLB.TV integration within Apple TV+ for subscribers
+- The "Big Inning" live whip-around show during the season
+
+**Cost:** Apple TV+ is $9.99/month or included with Apple One subscriptions.
+
+## ESPN+
+
+ESPN+ carries some out-of-market games and serves as the streaming home for ESPN's sports content. It's worth having for general sports coverage; specific Athletics game access is more limited than MLB.TV.
+
+## Peacock
+
+Peacock's MLB partnership includes Sunday morning games and some playoff content. For the regular season, the Athletics will appear on Peacock when scheduled for their Sunday morning window.
+
+## The Radio Option (Underrated)
+
+Athletics radio broadcasts are available on the team's flagship radio station in Las Vegas and nationally via the MLB app and Gameday Audio. For fans who've followed baseball on radio, the authentic experience of a great radio broadcast crew calling 162 games is genuinely special and doesn't require any streaming setup.
+
+## Summary Table
+
+| Option | Cost | Where | Best For |
+|---|---|---|---|
+| Local RSN | Cable/satellite included | Las Vegas market | Local fans with cable |
+| MLB.TV | $130-150/year | Everywhere | Out-of-market fans watching every game |
+| Apple TV+ Friday Baseball | Free (with free account) | Everywhere | Casual fans, select Friday games |
+| National broadcasts (Fox, ESPN) | Free w/ antenna or cable | Everywhere | Marquee games |
+| MLB app radio | $25-30/season | Everywhere | Radio fans, commuters |
+
+## Attendance: Go to Games
+
+For Las Vegas residents: the best way to experience the Athletics is in person. 162 games is a long season with plenty of accessible ticket prices, especially for midweek games. A baseball game is one of the best values in professional sports when you factor in the length and the atmosphere.
+
+Check the official Athletics website for single-game tickets, group packages, and season ticket options. Opening series and bobblehead nights sell out faster than you'd expect — plan ahead for the games you most want to attend.
+
+---
+
+*Game schedule, streaming guides, and community at [LV Athletics Nation](/games).*`,
+  },
+  {
+    slug: 'las-vegas-athletics-fan-community-different',
+    title: `The Las Vegas Athletics Fan Community Is Growing — Here's Why It's Different`,
+    excerpt: `The Las Vegas Athletics fan community is forming in real time — and it's unlike any fan community in baseball. Here's what makes it distinct and why that's a good thing.`,
+    date: '2026-04-01',
+    category: `Las Vegas Athletics`,
+    readingTime: '4 min read',
+    emoji: '⚾',
+    content: `Fan communities don't form on schedule. They emerge — built from shared experience, shared language, shared suffering and shared joy — in their own time, on their own terms. The Golden Knights fan community in Las Vegas took a Cinderella first season and one of the most emotionally charged stretches in franchise history to become what it is. The Raiders fan base in Las Vegas had a decade of Raider Nation mythology to absorb and transplant.
+
+The Las Vegas Athletics fan community is forming right now, from scratch, in conditions that have never existed before.
+
+## A Fan Base With Multiple Origin Stories
+
+Most fan communities have a single dominant origin story: we've always been here, our parents followed this team, we grew up wearing this jersey. The Las Vegas A's don't have that yet.
+
+What they have instead is a fascinating composition of origin stories that's genuinely unlike anything in baseball:
+
+**The Former Oakland Fan.** They follow the green and gold because they've followed it for thirty years, because their father took them to games at the Coliseum when they were seven, because the team is the anchor and the city is the context. For them, Las Vegas is a new venue for an ongoing relationship.
+
+**The Transplanted Bay Area Baseball Fan.** They moved to Nevada or Vegas from Northern California in the last decade (as hundreds of thousands of people have done). They were casual A's fans in Oakland. In Las Vegas, with the team now their home team, they find themselves becoming much more engaged.
+
+**The Las Vegas Native Who Found Baseball.** Born and raised in Nevada, spent their whole life in a city that had no major league baseball team. Now they have one. They're learning the game, learning the traditions, learning why infield shifts and defensive shifts matter and what it means when the closer comes in in the eighth.
+
+**The General Sports Fan Who Adopted the A's.** Las Vegas is a city full of people who love sports broadly — they follow the Raiders, the Knights, UNLV, whatever's on — and who are adding the Athletics to their portfolio.
+
+**The Baseball Tourist.** Not a local fan in the traditional sense, but someone who makes the trip to Las Vegas for a series specifically because the combination of Vegas and baseball is genuinely appealing. They become fans by accretion.
+
+All five of these people are in the stands. All five of them are in our community. None of them is less legitimate than the others.
+
+## What Makes This Community Different
+
+### It's Being Built Consciously
+
+Most fan communities formed before anyone was thinking about fan communities. The A's fan community in Las Vegas is forming in an era of social media, of fan forums, of community platforms, of people actively choosing to connect with other fans before they've shared a season together.
+
+This creates an interesting dynamic: the community is more intentionally shaped than most. The norms that get established in year one about how we talk to each other, how we treat newcomers, how we hold space for Oakland grief and Las Vegas enthusiasm simultaneously — these will shape the community for a decade.
+
+### It Welcomes the Newcomer
+
+The Oakland A's fan community is storied and passionate. It is also, in parts, understandably protective — and protection sometimes curdles into gatekeeping. The "real A's fans" framing that excludes people who came to the team after a certain date or from a certain geography.
+
+Las Vegas baseball doesn't have the option of gatekeeping. By definition, most people in this fan base are new to this specific configuration. If you're a Las Vegas native and you decided the A's are your team in 2026, you are the fan base. There's no "old guard" to get permission from.
+
+This enforced openness might be one of the healthiest features of a fan community built from this specific situation.
+
+### It Holds Complexity
+
+The Las Vegas Athletics fan community has to hold a complicated truth: the team arrived here through a process that caused real pain to people in Oakland. That's not a comfortable thing to sit with if you're genuinely caring about other humans. Most sports communities don't have to engage with this kind of structural question — you're a Yankees fan or you're not.
+
+The fans who are engaging honestly with the Oakland grief, who are leaving space for it rather than dismissing it, who understand that celebrating the team in Las Vegas doesn't require denying what it cost — these fans are building something more mature than most sports communities.
+
+That's not a small thing.
+
+## What We're Building Here
+
+LV Athletics Nation exists as a home for this community — all the origin stories, all the complications, all the fresh enthusiasm and the complicated history.
+
+We believe the Las Vegas Athletics fan base that forms in these first years will be one of the most interesting and distinctive fan communities in baseball. Not because of the circumstances that produced it — those circumstances include real pain. But because of what the people arriving from all those different places choose to build together.
+
+The baseball is just the occasion. The community is the thing.
+
+---
+
+*You're part of the Las Vegas Athletics story. [Join LV Athletics Nation](/community).*`,
+  },
+];
+posts.push(...aprilPosts2026);
