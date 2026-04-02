@@ -84,8 +84,19 @@ export default async function BlogPostPage({ params }: Props) {
   const prevPost = currentIndex < posts.length - 1 ? posts[currentIndex + 1] : null;
   const nextPost = currentIndex > 0 ? posts[currentIndex - 1] : null;
 
+  const articleSchema = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": post.title,
+    "description": post.excerpt,
+    "datePublished": post.date,
+    "author": { "@type": "Organization", "name": "LV Athletics Nation" },
+    "publisher": { "@type": "Organization", "name": "LV Athletics Nation", "url": "https://lvathleticsnation.com" }
+  };
+
   return (
     <main>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
       {/* ARTICLE HEADER */}
       <div style={{
         background: 'linear-gradient(180deg, #0d1a0e 0%, var(--dark) 100%)',
