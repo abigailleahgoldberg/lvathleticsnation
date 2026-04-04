@@ -14,7 +14,7 @@ What you do in these early years matters. Show up. Bring people. Make memories. 
 
 ## Getting to Know the Roster
 
-The A's 2025 roster has players worth knowing. The young pitchers who came up through the system are where the team's future lives — learning their names now, following their development, knowing their stories before they become stars means you're a real fan rather than a bandwagon.
+The A's 2026 roster has players worth knowing. The young pitchers who came up through the system are where the team's future lives — learning their names now, following their development, knowing their stories before they become stars means you're a real fan rather than a bandwagon.
 
 Start with the rotation. Know who's starting this week and why. Read the beat reporters who cover the team. Baseball is a 162-game season — it rewards fans who pay sustained attention rather than only showing up for big moments.
 
