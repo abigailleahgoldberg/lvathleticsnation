@@ -105,7 +105,7 @@ When the Dodgers come to Allegiant, it is not just a series. Show up early. Wear
 
 <p>See you at the ballpark. Eventually. Whenever that actually happens.</p>
 \${affiliateBlock}
-\`,
+`,
   },
   {
     slug: "las-vegas-athletics-fan-predictions-2026-season",
@@ -159,7 +159,7 @@ When the Dodgers come to Allegiant, it is not just a series. Show up early. Wear
 
 <p>Drop it in the comments. Let's go 2026. Green and gold.</p>
 \${affiliateBlock}
-\`,
+`,
   },
   {
       slug: "las-vegas-as-spring-training-2027-guide",
